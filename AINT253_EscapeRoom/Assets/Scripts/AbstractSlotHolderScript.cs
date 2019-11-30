@@ -27,6 +27,10 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         {
             allSlotsFull = false;
         }
+        else
+        {
+            allSlotsFull = true;
+        }
     }
 
     protected IItemSlotScript FindFreeSlot(GameObject requester)
@@ -72,7 +76,7 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         return temp;
     }
 
-    protected bool FindObject(GameObject objectToFind)
+    public bool FindObject(GameObject objectToFind)
     {
         bool objectFound = false;
 
@@ -87,7 +91,7 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         return objectFound;
     }
 
-    protected IItemSlotScript GetSlotOfObject(GameObject objectToFind)
+    public IItemSlotScript GetSlotOfObject(GameObject objectToFind)
     {
         IItemSlotScript objectSlot = null;
 
@@ -95,11 +99,27 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         {
             if (slotList[i].objectInSlot == objectToFind)
             {
-                objectSlot = slotList[i].objectInSlot.GetComponent<IItemSlotScript>();
+                objectSlot = slotList[i];
+                Debug.Log("found the object's slot");
             }
         }
 
         return objectSlot;
+    }
+
+    protected int GetIndexOfSlot(IItemSlotScript slot)
+    {
+        int slotIndex = -1;
+
+        for (int i = 0; i < slotList.Count; i++)
+        {
+            if (slotList[i] == slot)
+            {
+                slotIndex = i;
+            }
+        }
+
+        return slotIndex;
     }
 
     //protected virtual Transform GetSlotTransform(GameObject requester)
@@ -122,6 +142,7 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
             IItemSlotScript freeSlot = FindFreeSlot(item);
 
             freeSlot.HoldItem(item);
+            //item.GetComponent<IInteractionLogicScript>().InteractionRequest(freeSlot);
 
             CheckIfSlotAreFull();
             //item.GetComponent<Rigidbody>().isKinematic = true;
@@ -154,5 +175,7 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         }
 
         slotList[objectIndex].DropHeldItem();
+
+        CheckIfSlotAreFull();
     }
 }

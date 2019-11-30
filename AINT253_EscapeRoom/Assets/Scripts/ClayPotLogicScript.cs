@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClayPotActionScript : MonoBehaviour, IInteractionLogicScript
+public class ClayPotLogicScript : MonoBehaviour, IInteractionLogicScript
 {
     public GameObject potContents;
 
@@ -24,22 +24,31 @@ public class ClayPotActionScript : MonoBehaviour, IInteractionLogicScript
             {
                 string requesterTag = interactionRequester.tag;
 
-                Debug.Log("made it into clay pots's request");
+                bool requesterHasSlot = false;
+                bool requesterIsNotFull = false;
+
+                //GameObject objectInSlot = FindObjectByTag("Torch");
+
+                if (interactionRequester.TryGetComponent(out AbstractSlotHolderScript slotHolderScript))
+                {
+                    Debug.Log("I am: " + gameObject.ToString());
+                    Debug.Log("found a slot holder in requester: " + slotHolderScript.ToString());
+
+                    requesterHasSlot = slotHolderScript.hasItemSlot;
+                    requesterIsNotFull = !slotHolderScript.allSlotsFull;
+                }
 
                 if (requesterTag == "Player")
                 {
-                    bool requesterHasSlot = interactionRequester.GetComponent<IInteractionLogicScript>().hasItemSlot;
-                    bool requesterIsHoldingItem = interactionRequester.GetComponent<IInteractionLogicScript>().allSlotsFull;
-                    
-                    if (requesterHasSlot && !requesterIsHoldingItem)
+                    if (requesterHasSlot && requesterIsNotFull)
                     {
                         GameObject temp;
                         canSpawnItem = false;
                         temp = Instantiate(potContents, transform.position, Quaternion.identity);
-                        temp.GetComponent<InteractableObjectScript>();
+                        //temp.GetComponent<InteractableObjectScript>();
                         interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(temp);
 
-                        Debug.Log(temp.ToString());
+                        //Debug.Log(temp.ToString());
                         Invoke("DelayPickUp", itemPickUpDelay);
                     }
                 }

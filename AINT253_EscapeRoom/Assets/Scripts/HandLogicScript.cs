@@ -27,8 +27,9 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
         isLeftHandOccupied = false;
         //allSlotsFull = false;
         //slotList = new List<IItemSlotScript>(GetComponentsInChildren<IItemSlotScript>());
-        Debug.Log(slotList.ToString());
+
         FindItemSlots();
+        Debug.Log(slotList.ToString());
         CheckIfSlotAreFull();
 
         m_RightHandSlot = m_RightHand.GetComponent<IItemSlotScript>();
@@ -55,7 +56,7 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
     {
         if(observedObject != null)
         {
-            if(hasItemSlot && !allSlotsFull)
+            if(hasItemSlot)
             {
                 string observedTag = observedObject.tag;
 
@@ -63,6 +64,7 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                 bool observedIsNotFull = false;
                 if (observedObject.TryGetComponent(out AbstractSlotHolderScript slotHolderScript))
                 {
+                    Debug.Log("I am: " + gameObject.ToString());
                     Debug.Log("found a slot holder in observed: " + slotHolderScript.ToString());
 
                     observedHasSlots = slotHolderScript.hasItemSlot;
@@ -83,13 +85,21 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                 }
                 else if(observedTag == "TorchHolder")
                 {
-                    if (observedHasSlots && observedIsNotFull)
+                    if (observedHasSlots)
                     {
-                        if (m_RightHandSlot.isSlotFull && m_RightHandSlot.objectInSlot.tag == "Torch")
+                        if (observedIsNotFull)
                         {
-                            observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(m_RightHandSlot.objectInSlot);
-                            m_RightHandSlot.DropHeldItem();
+                            if (m_RightHandSlot.isSlotFull && m_RightHandSlot.objectInSlot.tag == "Torch")
+                            {
+                                observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(m_RightHandSlot.objectInSlot);
+                                m_RightHandSlot.DropHeldItem();
+                            }
                         }
+                        else
+                        {
+                            observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
+                        }
+                        
                     }
                 }
                 else if(observedTag == "ClayPot")
@@ -104,16 +114,16 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                 {
                     if (!m_RightHandSlot.isSlotFull)
                     {
-                        observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
                         HoldItem(observedObject);
+                        observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
                     }
                 }
                 else if(observedTag == "Torch")
                 {
                     if (!m_RightHandSlot.isSlotFull)
                     {
-                        observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
                         HoldItem(observedObject);
+                        observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
                     }
                 }
             }
@@ -183,6 +193,7 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
             //}
         }
         //allSlotsFull = isRightHandOccupied;
+        CheckIfSlotAreFull();
     }
 
     //public Transform GetSlotTransform(GameObject requester)

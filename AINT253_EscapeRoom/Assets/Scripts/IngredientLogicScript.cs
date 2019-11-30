@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IngredientActionScript : AbstractPickableObjectScript, IInteractionLogicScript
+public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionLogicScript
 {
     public GameObject bowl { get; private set; }
 
@@ -30,39 +30,81 @@ public class IngredientActionScript : AbstractPickableObjectScript, IInteraction
 
     public void InteractionRequest(GameObject interactionRequester)
     {
-        if(interactionRequester.TryGetComponent(out IInteractionLogicScript interactionLogicScript))
+        if (interactionRequester.TryGetComponent(out AbstractSlotHolderScript slotHolderScript))
         {
-            Transform requesterItemSlot = null;
+            bool parentHasSlots = false;
+            bool parentIsNotFull = false;
 
             string requesterTag = interactionRequester.tag;
 
-            requesterItemSlot = interactionLogicScript.GetSlotTransform(gameObject);
+            Debug.Log("I am: " + gameObject.ToString());
+            Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
 
-            //if (requesterItemSlot != parentTransform && parentTransform != null)// && requesterTag != "Player")
-            //{
-            //    Debug.Log("parent transform game object: " + parentTransform.gameObject.ToString());
-            //    Debug.Log("parent transform tag: " + parentTransform.gameObject.tag);
-            //    parentTransform.gameObject.GetComponentInParent<IInteractionLogicScript>().InteractionRequest(gameObject);
-            //    Debug.Log("requester item slot: " + requesterItemSlot.ToString());
+            parentHasSlots = slotHolderScript.hasItemSlot;
+            parentIsNotFull = !slotHolderScript.allSlotsFull;
 
-            //}
-            //Debug.Log("my current parent: " + parentTransform.gameObject.ToString());
-            //if(parentTransform != null && requesterItemSlot != parentTransform && parentTransform.gameObject.tag == "Bowl")
-            //{
-            //    Debug.Log("informing bowl I'm leaving it");
-            //    parentTransform.gameObject.GetComponentInParent<IInteractionLogicScript>().InteractionRequest(gameObject);
-            //}
-            Debug.Log("made it into ingredients's request");
-            GetPickedUp(requesterItemSlot);
+            if (parentHasSlots)
+            {
+                Transform newParentTransform = null;
 
+                if (slotHolderScript.FindObject(gameObject))
+                {
+                    IItemSlotScript parentSlot = slotHolderScript.GetSlotOfObject(gameObject);
 
+                    newParentTransform = parentSlot.slotTransform;
+                }
 
+                if (parentTransform != null && newParentTransform != parentTransform)
+                {
+                    GetDropped();
+                }
+
+                GetPickedUp(newParentTransform);
+            }
 
             if (requesterTag == "Bowl")
             {
                 SetKinematic(false);
             }
+
+
+
         }
+
+
+        //if (interactionRequester.TryGetComponent(out AbstractSlotHolderScript slotHolderScript))
+        //{
+        //    Debug.Log("I am: " + gameObject.ToString());
+        //    Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
+
+        //    IItemSlotScript requesterItemSlot = null;
+
+        //    string requesterTag = interactionRequester.tag;
+
+        //    requesterItemSlot = slotHolderScript.GetSlotOfObject(gameObject);
+
+        //    //if (requesterItemSlot != parentTransform && parentTransform != null)// && requesterTag != "Player")
+        //    //{
+        //    //    Debug.Log("parent transform game object: " + parentTransform.gameObject.ToString());
+        //    //    Debug.Log("parent transform tag: " + parentTransform.gameObject.tag);
+        //    //    parentTransform.gameObject.GetComponentInParent<IInteractionLogicScript>().InteractionRequest(gameObject);
+        //    //    Debug.Log("requester item slot: " + requesterItemSlot.ToString());
+
+        //    //}
+        //    //Debug.Log("my current parent: " + parentTransform.gameObject.ToString());
+        //    //if(parentTransform != null && requesterItemSlot != parentTransform && parentTransform.gameObject.tag == "Bowl")
+        //    //{
+        //    //    Debug.Log("informing bowl I'm leaving it");
+        //    //    parentTransform.gameObject.GetComponentInParent<IInteractionLogicScript>().InteractionRequest(gameObject);
+        //    //}
+        //    Debug.Log("made it into ingredients's request");
+        //    GetPickedUp(requesterItemSlot.slotTransform);
+
+
+
+
+            
+        //}
     }
 
     //public void GetPickedUp(Transform newParent)

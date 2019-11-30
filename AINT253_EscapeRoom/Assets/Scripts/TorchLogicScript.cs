@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorchActionScript : AbstractPickableObjectScript, IInteractionLogicScript, IActionScript
+public class TorchLogicScript : AbstractPickableObjectScript, IInteractionLogicScript, IActionScript
 {
 
     //public bool isPickable { get; private set; }
@@ -38,38 +38,75 @@ public class TorchActionScript : AbstractPickableObjectScript, IInteractionLogic
 
     public void InteractionRequest(GameObject interactionRequester)
     {
-        Transform requesterItemSlot = null;
-
-        if (interactionRequester != null)
+        if (interactionRequester.TryGetComponent(out AbstractSlotHolderScript slotHolderScript))
         {
+            bool parentHasSlots = false;
+            bool parentIsNotFull = false;
+
             string requesterTag = interactionRequester.tag;
 
-            Debug.Log("made it into torch's request");
+            Debug.Log("I am: " + gameObject.ToString());
+            Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
 
-            if (requesterTag == "Player" && isInHolder)
-            {
-                ToggleTorch();
-            }
-            else
-            {
-                requesterItemSlot = interactionRequester.GetComponent<IInteractionLogicScript>().GetSlotTransform(gameObject);
-                GetPickedUp(requesterItemSlot);
-            }
+            parentHasSlots = slotHolderScript.hasItemSlot;
+            parentIsNotFull = !slotHolderScript.allSlotsFull;
 
-            if (requesterTag == "TorchHolder")
+            if (parentHasSlots)
             {
-                isInHolder = true;
-            }
-            else
-            {
-                isInHolder = false;
-            }
+                Transform newParentTransform = null;
 
-            if (requesterTag == "Bowl")
-            {
-                SetKinematic(false);
+                if (slotHolderScript.FindObject(gameObject))
+                {
+                    IItemSlotScript parentSlot = slotHolderScript.GetSlotOfObject(gameObject);
+
+                    newParentTransform = parentSlot.slotTransform;
+                }
+
+                if (requesterTag == "Player" && isInHolder)
+                {
+                    ToggleTorch();
+                }
+                else
+                {
+                    if (parentTransform != null && newParentTransform != parentTransform)
+                    {
+                        GetDropped();
+                    }
+
+                    GetPickedUp(newParentTransform);
+                }
+
+                if (requesterTag == "TorchHolder")
+                {
+                    isInHolder = true;
+                }
+                else
+                {
+                    isInHolder = false;
+                }
+
+                if (requesterTag == "Bowl")
+                {
+                    SetKinematic(false);
+                }
             }
         }
+
+        //Transform requesterItemSlot = null;
+
+        //if (interactionRequester != null)
+        //{
+        //    string requesterTag = interactionRequester.tag;
+
+        //    Debug.Log("made it into torch's request");
+
+            
+
+        //    if (requesterTag == "Bowl")
+        //    {
+        //        SetKinematic(false);
+        //    }
+        //}
     }
 
     public void PerformAction()

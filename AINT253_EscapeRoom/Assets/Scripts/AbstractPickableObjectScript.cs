@@ -22,23 +22,16 @@ public abstract class AbstractPickableObjectScript : MonoBehaviour
     {
         if (newParent != null)
         {
-            bool parentCanHoldItems = newParent.GetComponentInParent<IInteractionLogicScript>().hasItemSlot;
-            bool parentHasFreeSlot = !newParent.GetComponentInParent<IInteractionLogicScript>().allSlotsFull;
-            if (parentCanHoldItems && parentHasFreeSlot)
-            {
-                if (parentTransform != null && newParent != parentTransform)
-                {
-                    GetDropped();
-                }
-                parentTransform = newParent;
-                SetKinematic(true);
-                transform.SetParent(parentTransform, true);
-                transform.SetPositionAndRotation(newParent.position, newParent.rotation);
+            parentTransform = newParent;
+            SetKinematic(true);
+            transform.SetParent(parentTransform, true);
+            transform.SetPositionAndRotation(newParent.position, newParent.rotation);
 
-                isDetached = false;
-            }
+            isDetached = false;
         }
     }
+
+
 
     protected void GetDropped()
     {

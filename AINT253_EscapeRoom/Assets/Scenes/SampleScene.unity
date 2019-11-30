@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -72,7 +72,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 2
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -96,7 +96,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 46d0da2b9d94e714b91939681294b304,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -132,7 +133,7 @@ GameObject:
   - component: {fileID: 257747343}
   - component: {fileID: 257747347}
   - component: {fileID: 257747348}
-  - component: {fileID: 257747349}
+  - component: {fileID: 257747344}
   m_Layer: 8
   m_Name: ClayPot
   m_TagString: ClayPot
@@ -153,6 +154,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.9, z: 0.7}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &257747344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257747342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3eae54ec1f6ac64d81edcaf863e04ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potContents: {fileID: 401458571}
+  itemPickUpDelay: 2
 --- !u!4 &257747346
 Transform:
   m_ObjectHideFlags: 0
@@ -196,21 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ad26792f9082747a7425fd0c0d0c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionImage: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
---- !u!114 &257747349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257747342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3eae54ec1f6ac64d81edcaf863e04ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  potContents: {fileID: 401458571}
-  itemPickUpDelay: 2
 --- !u!1 &280340110
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 319082713}
   - component: {fileID: 319082717}
   - component: {fileID: 319082718}
-  - component: {fileID: 319082719}
+  - component: {fileID: 319082714}
   m_Layer: 8
   m_Name: Torch
   m_TagString: Torch
@@ -357,6 +357,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &319082714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319082712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d537216a477cba44fa6844d4a1f745ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlitTorch: {fileID: 2100000, guid: 66777f43ce8dc414586cac2e21c3731c, type: 2}
+  litTorch: {fileID: 2100000, guid: f01badefd273a1242b205333afcc8fc8, type: 2}
+  torchHead: {fileID: 1458299279}
 --- !u!4 &319082716
 Transform:
   m_ObjectHideFlags: 0
@@ -400,22 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ad26792f9082747a7425fd0c0d0c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionImage: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
---- !u!114 &319082719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319082712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d537216a477cba44fa6844d4a1f745ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unlitTorch: {fileID: 2100000, guid: 66777f43ce8dc414586cac2e21c3731c, type: 2}
-  litTorch: {fileID: 2100000, guid: f01badefd273a1242b205333afcc8fc8, type: 2}
-  torchHead: {fileID: 1458299279}
 --- !u!1 &323442794
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ad26792f9082747a7425fd0c0d0c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionImage: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
 --- !u!114 &401458574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1776,7 +1774,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
+  m_BoundingSphereOverride: {x: 58478.254, y: 1.81771e+31, z: 7.2723136e+22, w: 4.650694e+27}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3022,7 +3020,8 @@ GameObject:
   - component: {fileID: 2027352602}
   - component: {fileID: 2027352606}
   - component: {fileID: 2027352607}
-  - component: {fileID: 2027352608}
+  - component: {fileID: 2027352604}
+  - component: {fileID: 2027352603}
   m_Layer: 8
   m_Name: Bowl
   m_TagString: Bowl
@@ -3043,6 +3042,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2027352603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027352601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42ee558ba26d384b87adeaeefc9c24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bowlSlotTransform: {fileID: 1065072753}
+--- !u!114 &2027352604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027352601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a44dc74fdb9daea4685c58b5eeb3cc62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2027352605
 Transform:
   m_ObjectHideFlags: 0
@@ -3087,20 +3111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ad26792f9082747a7425fd0c0d0c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionImage: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
---- !u!114 &2027352608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027352601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a44dc74fdb9daea4685c58b5eeb3cc62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bowlSlotTransform: {fileID: 1065072753}
 --- !u!1 &2051818240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3190,6 +3200,7 @@ GameObject:
   - component: {fileID: 2061495574}
   - component: {fileID: 2061495575}
   - component: {fileID: 2061495573}
+  - component: {fileID: 2061495576}
   - component: {fileID: 2061495572}
   m_Layer: 8
   m_Name: TorchHolder
@@ -3207,10 +3218,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2061495571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 098d8f8e1d10f794289618b04eb1b368, type: 3}
+  m_Script: {fileID: 11500000, guid: a8cd132cfe4faa74bba81e42a9e30070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torchHolderSlotTransform: {fileID: 997644104}
+  bowlSlotTransform: {fileID: 997644104}
 --- !u!114 &2061495573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3223,7 +3234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ad26792f9082747a7425fd0c0d0c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionImage: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
 --- !u!4 &2061495574
 Transform:
   m_ObjectHideFlags: 0
@@ -3253,6 +3263,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 0.2, z: 0.15}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2061495576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061495571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098d8f8e1d10f794289618b04eb1b368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5054116514894822850
 MonoBehaviour:
   m_ObjectHideFlags: 0
