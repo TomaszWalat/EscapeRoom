@@ -9,6 +9,7 @@ TagManager:
   - ClayPot
   - TorchHolder
   - Ingredient
+  - FirePit
   layers:
   - Default
   - TransparentFX

@@ -32,6 +32,7 @@ public class TorchHolderSlotScript : MonoBehaviour, IItemSlotScript
         GameObject temp = objectInSlot;
 
         objectInSlot = null;
+        isSlotFull = false;
 
         return temp;
     }
@@ -39,5 +40,6 @@ public class TorchHolderSlotScript : MonoBehaviour, IItemSlotScript
     public void DropHeldItem()
     {
         objectInSlot = null;
+        isSlotFull = false;
     }
 }

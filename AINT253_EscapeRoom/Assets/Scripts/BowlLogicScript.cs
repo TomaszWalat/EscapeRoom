@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript, IActionScript
+public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript, IActionScript, IPuzzlePieceScript
 {
     //public bool allSlotsFull { get; private set; }
     //public bool hasItemSlot { get; private set; }
@@ -15,7 +15,13 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
 
     //public int bowlContentsSize { get; private set; }
 
-    //public Transform bowlSlotTransform;
+    public Transform bowlHolderSlotTransform;
+
+    public bool puzzlePieceComplete { get; private set; }
+
+    public PuzzleElementScript puzzleElementScript;
+    public BowlContentsTemplateScript contentsTemplateScript;
+    public GameObject bowlModel;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +31,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
         FindItemSlots();
         CheckIfSlotAreFull();
 
+        //contentsTemplateScript = GetComponentInChildren<BowlContentsTemplateScript>();
         //slotTransform = bowlSlotTransform;
     }
 
@@ -52,29 +59,50 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
 
                 if (requesterTag == "Player")
                 {
-                    //interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
+                    interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
                 }
                 else if (requesterTag == "Ingredient" || requesterTag == "Torch")
                 {
-                    if (!FindObject(interactionRequester))
-                    {
-                        HoldItem(interactionRequester);
-                        interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
+                    bool isTorchLit = false;
 
-                        BowlSlotScript newSlot = new BowlSlotScript();
-                        slotList.Add(newSlot);
-                    }
-                    else if(FindObject(interactionRequester))
+                    if(interactionRequester.TryGetComponent(out TorchLogicScript torchLogicScript))
                     {
-                        int requesterIndex = GetIndexOfSlot(GetSlotOfObject(interactionRequester));
-                        DropItem(interactionRequester);
-                        if(requesterIndex > 0)
+                        isTorchLit = torchLogicScript.isTorchLit;
+                    }
+
+                    if (!isTorchLit)
+                    {
+                        if (!FindObject(interactionRequester))
                         {
-                            if(!slotList[requesterIndex].isSlotFull)
+                            HoldItem(interactionRequester);
+                            interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
+
+                            BowlSlotScript newSlot = gameObject.AddComponent<BowlSlotScript>();
+                            newSlot.bowlSlotTransform = bowlHolderSlotTransform;
+                            newSlot.slotTransform = bowlHolderSlotTransform;
+                            slotList.Add(newSlot);
+                        }
+                        else if (FindObject(interactionRequester))
+                        {
+                            BowlSlotScript temp = GetSlotOfObject(interactionRequester) as BowlSlotScript;
+
+                            int requesterSlotIndex = GetIndexOfSlot(GetSlotOfObject(interactionRequester));
+                            DropItem(interactionRequester);
+
+                            if (requesterSlotIndex > 0)
                             {
-                                slotList.RemoveAt(requesterIndex);
+                                if (!temp.isSlotFull)
+                                {
+                                    temp.SelfDestruct();
+                                    slotList.RemoveAt(requesterSlotIndex);
+                                }
                             }
                         }
+                    }
+                    else if(isTorchLit)
+                    {
+                        //Debug.Log("about to call perform action");
+                        PerformAction();
                     }
                 }
             }
@@ -127,11 +155,77 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
         //    //    }
         //    //}
     }
-    
 
     public void PerformAction()
     {
+        //Debug.Log("preform action called");
+        if(CheckBowlContents())
+        {
+            //Debug.Log("bow contents is correct");
+            puzzlePieceComplete = true;
+            puzzleElementScript.AddPuzzlePiece(gameObject);
+            bowlModel.GetComponent<MeshRenderer>().material.color = Color.red;
+        }
+    }
 
+    public bool CheckBowlContents()
+    {
+        bool ritualComplete = false;
+        //Debug.Log("0");
+        //Debug.Log("rutual status: " + ritualComplete);
+        if(slotList.Count == contentsTemplateScript.puzzleTemplateList.Count + 1)
+        {
+            //Debug.Log("1");
+            ritualComplete = true;
+        //Debug.Log("rutual status: " + ritualComplete);
+            for (int i = 0; i < contentsTemplateScript.puzzleTemplateList.Count; i++)
+            {
+                //Debug.Log("1." + i);
+
+                bool itemFound = false;
+                //Debug.Log("item found: " + itemFound);
+
+                for (int j = 0; j < slotList.Count -1; j++)
+                {
+                    //Debug.Log("1." + i + "." + j);
+
+                    //Debug.Log("template object type: " + (contentsTemplateScript.puzzleTemplateList[i] as IngredientLogicScript).gameObject.name.ToString() + "(Clone)");
+                    //Debug.Log("ingredient type: " + slotList[i].objectInSlot.name.ToString());
+
+                    if ((contentsTemplateScript.puzzleTemplateList[i] as IngredientLogicScript).gameObject.name + "(Clone)" == slotList[j].objectInSlot.name)
+                    {
+                        //Debug.Log("2");
+
+                        itemFound = true;
+                        //Debug.Log("item found: " + itemFound);
+                    }
+                }
+                //Debug.Log("item found: " + itemFound);
+
+                if (!itemFound)
+                {
+                    //Debug.Log("3");
+
+                    ritualComplete = false;
+                }
+                //Debug.Log("rutual status: " + ritualComplete);
+            }
+            //Debug.Log("rutual status: " + ritualComplete);
+        }
+        //Debug.Log("rutual status: " + ritualComplete);
+
+        //for(int i = 0; i < slotList.Count; i++)
+        //{
+        //    for(int j = 0; j < contentsTemplateScript.puzzleTemplateList.Count; j++)
+        //    {
+        //        if(!(contentsTemplateScript.puzzleTemplateList[j].GetType() == slotList[i].GetType()))
+        //        {
+        //            ritualComplete = false;
+        //        }
+        //    }
+        //}
+
+        return ritualComplete;
     }
 
     //public Transform FindFreeSlot(GameObject requester)

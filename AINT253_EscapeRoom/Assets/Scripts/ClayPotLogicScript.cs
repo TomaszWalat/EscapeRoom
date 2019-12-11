@@ -27,12 +27,10 @@ public class ClayPotLogicScript : MonoBehaviour, IInteractionLogicScript
                 bool requesterHasSlot = false;
                 bool requesterIsNotFull = false;
 
-                //GameObject objectInSlot = FindObjectByTag("Torch");
-
                 if (interactionRequester.TryGetComponent(out AbstractSlotHolderScript slotHolderScript))
                 {
-                    Debug.Log("I am: " + gameObject.ToString());
-                    Debug.Log("found a slot holder in requester: " + slotHolderScript.ToString());
+                    //Debug.Log("I am: " + gameObject.ToString());
+                    //Debug.Log("found a slot holder in requester: " + slotHolderScript.ToString());
 
                     requesterHasSlot = slotHolderScript.hasItemSlot;
                     requesterIsNotFull = !slotHolderScript.allSlotsFull;
@@ -45,7 +43,9 @@ public class ClayPotLogicScript : MonoBehaviour, IInteractionLogicScript
                         GameObject temp;
                         canSpawnItem = false;
                         temp = Instantiate(potContents, transform.position, Quaternion.identity);
-                        //temp.GetComponent<InteractableObjectScript>();
+                        //Debug.Log("ingredient spawned: " + temp.ToString());
+                        //temp.name.Replace("(Clone)", "");
+                        //Debug.Log("ingredient spawned: " + temp.name.ToString());
                         interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(temp);
 
                         //Debug.Log(temp.ToString());

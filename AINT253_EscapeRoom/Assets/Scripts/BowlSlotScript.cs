@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BowlSlotScript : MonoBehaviour, IItemSlotScript
+public class BowlSlotScript : MonoBehaviour, IItemSlotScript, ISelfDestructScript
 {
     public string slotName { get; private set; }
 
@@ -10,7 +10,9 @@ public class BowlSlotScript : MonoBehaviour, IItemSlotScript
 
     public GameObject objectInSlot { get; private set; }
 
-    public Transform slotTransform { get; private set; }
+    public Transform slotTransform { get; set; }
+
+    public float secondsDelay { get; set; }
 
     public Transform bowlSlotTransform;
 
@@ -32,6 +34,7 @@ public class BowlSlotScript : MonoBehaviour, IItemSlotScript
         GameObject temp = objectInSlot;
 
         objectInSlot = null;
+        isSlotFull = false;
 
         return temp;
     }
@@ -39,6 +42,13 @@ public class BowlSlotScript : MonoBehaviour, IItemSlotScript
     public void DropHeldItem()
     {
         objectInSlot = null;
+        isSlotFull = false;
+
     }
 
+    public void SelfDestruct()
+    {
+        Debug.Log("I'm self destructing");
+        Destroy(this, secondsDelay);
+    }
 }

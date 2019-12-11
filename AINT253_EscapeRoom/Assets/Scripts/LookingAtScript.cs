@@ -50,7 +50,7 @@ public class LookingAtScript : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log(objectObserved.ToString());
+                //Debug.Log(objectObserved.ToString());
                 m_InteractionLogicScript.InteractionRequest(objectObserved);
             }
         }

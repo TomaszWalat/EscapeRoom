@@ -17,6 +17,8 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         if(slotList.Count > 0)
         {
             hasItemSlot = true;
+            //Debug.Log("I am: " + gameObject);
+            //Debug.Log("I have slots: " + hasItemSlot);
         }
     }
 
@@ -31,6 +33,10 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         {
             allSlotsFull = true;
         }
+        //Debug.Log("I am: " + gameObject);
+        //Debug.Log("I am full: " + allSlotsFull);
+
+
     }
 
     protected IItemSlotScript FindFreeSlot(GameObject requester)
@@ -100,14 +106,14 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
             if (slotList[i].objectInSlot == objectToFind)
             {
                 objectSlot = slotList[i];
-                Debug.Log("found the object's slot");
+                //Debug.Log("found the object's slot");
             }
         }
 
         return objectSlot;
     }
 
-    protected int GetIndexOfSlot(IItemSlotScript slot)
+    public int GetIndexOfSlot(IItemSlotScript slot)
     {
         int slotIndex = -1;
 
@@ -142,40 +148,65 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
             IItemSlotScript freeSlot = FindFreeSlot(item);
 
             freeSlot.HoldItem(item);
-            //item.GetComponent<IInteractionLogicScript>().InteractionRequest(freeSlot);
 
             CheckIfSlotAreFull();
-            //item.GetComponent<Rigidbody>().isKinematic = true;
-            //m_RightHand.GetComponent<IItemSlotScript>().HoldItem(item);
-            //isRightHandOccupied = m_RightHand.GetComponent<HandSlotScript>().isSlotFull;
         }
     }
 
-    //protected virtual GameObject GiveItem()
-    //{
-    //    GameObject temp = null;
-    //    if (isRightHandOccupied)
-    //    {
-    //        isRightHandOccupied = false;
-    //        temp = m_RightHand.GetComponent<IItemSlotScript>().GiveHeldItem();
-    //    }
-    //    return temp;
-    //}
+    protected GameObject GiveItem(int slotIndex)
+    {
+        GameObject temp = null;
+        if (slotList[slotIndex].isSlotFull)
+        {
+            temp = slotList[slotIndex].GiveHeldItem();
+            CheckIfSlotAreFull();
+        }
+        return temp;
+    }
 
     protected void DropItem(GameObject itemToDrop)
     {
-        int objectIndex = 0;
-
-        for (int i = 0; i < slotList.Count; i++)
+        if(FindObject(itemToDrop))
         {
-            if (slotList[i].objectInSlot == itemToDrop)
+            int objectIndex = 0;
+
+            for (int i = 0; i < slotList.Count; i++)
             {
-                objectIndex = i;
+                if (slotList[i].objectInSlot == itemToDrop)
+                {
+                    objectIndex = i;
+                }
             }
+
+            slotList[objectIndex].DropHeldItem();
+
+            CheckIfSlotAreFull();
         }
+    }
 
-        slotList[objectIndex].DropHeldItem();
+    protected void PrintSlotList()
+    {
+        Debug.Log("");
+        Debug.Log("##### printing starting #####");
+        Debug.Log("");
+        Debug.Log("Number of slots: " + slotList.Count);
+        Debug.Log(" ");
+        for (int i = 0; i < slotList.Count - 1; i++)
+        {
+            Debug.Log("Slot " + i + ": " + slotList[i].ToString());
+            if(slotList[i].objectInSlot != null)
+            {
+                Debug.Log("        Contents: " + slotList[i].objectInSlot.ToString());
+            }
+            else
+            {
+                Debug.Log("        Contents: null");
+            }
 
-        CheckIfSlotAreFull();
+        }
+        Debug.Log("Slot " + (slotList.Count - 1) + ": " + slotList[slotList.Count - 1].ToString());
+        Debug.Log("");
+        Debug.Log("----- printing done -----");
+        Debug.Log("");
     }
 }

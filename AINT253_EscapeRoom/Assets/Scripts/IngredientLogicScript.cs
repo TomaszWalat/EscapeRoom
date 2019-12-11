@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionLogicScript
+public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionLogicScript, IPuzzlePieceScript
 {
     public GameObject bowl { get; private set; }
 
@@ -10,6 +10,8 @@ public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionL
     //public bool isDetached { get; private set; }
 
     public bool isInBowl { get; private set; }
+
+    public bool puzzlePieceComplete { get; private set; }
 
     //public Transform parentTransform { get; private set; }
 
@@ -20,6 +22,7 @@ public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionL
         isDetached = true;
         isInBowl = false;
         parentTransform = gameObject.transform;
+        puzzlePieceComplete = true;
     }
 
     // Update is called once per frame
@@ -37,18 +40,22 @@ public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionL
 
             string requesterTag = interactionRequester.tag;
 
-            Debug.Log("I am: " + gameObject.ToString());
-            Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
+            //Debug.Log("I am: " + gameObject.ToString());
+            //Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
 
             parentHasSlots = slotHolderScript.hasItemSlot;
             parentIsNotFull = !slotHolderScript.allSlotsFull;
 
-            if (parentHasSlots)
+            //Debug.Log("parent has slots: " + parentHasSlots);
+            //Debug.Log("parent is not full: " + parentIsNotFull);
+
+            if (parentHasSlots)// && parentIsNotFull)
             {
                 Transform newParentTransform = null;
 
                 if (slotHolderScript.FindObject(gameObject))
                 {
+                    //Debug.Log("Ingredient - I'm already with this parent ---------------");
                     IItemSlotScript parentSlot = slotHolderScript.GetSlotOfObject(gameObject);
 
                     newParentTransform = parentSlot.slotTransform;
@@ -59,6 +66,8 @@ public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionL
                     GetDropped();
                 }
 
+                //Debug.Log("current parent transform: " + parentTransform);
+                //Debug.Log("new parent transform: " + newParentTransform);
                 GetPickedUp(newParentTransform);
             }
 

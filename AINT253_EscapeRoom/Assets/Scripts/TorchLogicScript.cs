@@ -45,51 +45,109 @@ public class TorchLogicScript : AbstractPickableObjectScript, IInteractionLogicS
 
             string requesterTag = interactionRequester.tag;
 
-            Debug.Log("I am: " + gameObject.ToString());
-            Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
+            //Debug.Log("I am: " + gameObject.ToString());
+            //Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
 
             parentHasSlots = slotHolderScript.hasItemSlot;
             parentIsNotFull = !slotHolderScript.allSlotsFull;
 
-            if (parentHasSlots)
+            if (parentHasSlots)// && parentIsNotFull)
             {
                 Transform newParentTransform = null;
 
                 if (slotHolderScript.FindObject(gameObject))
                 {
+                    //Debug.Log("Torch - I'm already with this parent ---------------");
                     IItemSlotScript parentSlot = slotHolderScript.GetSlotOfObject(gameObject);
 
                     newParentTransform = parentSlot.slotTransform;
                 }
 
-                if (requesterTag == "Player" && isInHolder)
+                if (parentTransform != null && newParentTransform != parentTransform)
                 {
-                    ToggleTorch();
-                }
-                else
-                {
-                    if (parentTransform != null && newParentTransform != parentTransform)
-                    {
-                        GetDropped();
-                    }
-
-                    GetPickedUp(newParentTransform);
+                    GetDropped();
                 }
 
-                if (requesterTag == "TorchHolder")
-                {
-                    isInHolder = true;
-                }
-                else
-                {
-                    isInHolder = false;
-                }
-
-                if (requesterTag == "Bowl")
-                {
-                    SetKinematic(false);
-                }
+                //Debug.Log("current parent transform: " + parentTransform);
+                //Debug.Log("new parent transform: " + newParentTransform);
+                GetPickedUp(newParentTransform);
             }
+
+            if (requesterTag == "Bowl")
+            {
+                SetKinematic(false);
+            }
+
+            //Debug.Log("1");
+
+            //if(isInHolder && parentTransform.GetComponentInParent<AbstractSlotHolderScript>().FindObject(gameObject))
+            //{
+            //    if(requesterTag == "Player")
+            //    {
+            //        ToggleTorch();
+            //    }
+            //}
+            //else
+            //{
+            //    if (parentHasSlots && parentIsNotFull)
+            //    {
+            //        Debug.Log("2");
+
+            //        Transform newParentTransform = null;
+
+            //        if (slotHolderScript.FindObject(gameObject))
+            //        {
+            //            Debug.Log("3");
+
+            //            IItemSlotScript parentSlot = slotHolderScript.GetSlotOfObject(gameObject);
+
+            //            newParentTransform = parentSlot.slotTransform;
+            //        }
+
+
+            //        if (parentTransform != null)// && !parentTransform.GetComponentInParent<AbstractSlotHolderScript>().FindObject(gameObject))
+            //        {
+            //            Debug.Log("5");
+
+            //            if (parentTransform != null && newParentTransform != parentTransform)
+            //            {
+            //                Debug.Log("6");
+
+            //                GetDropped();
+            //                isInHolder = false;
+            //            }
+
+            //            GetPickedUp(newParentTransform);
+
+            //            if (parentTransform.tag == "TorchHolder")
+            //            {
+            //                Debug.Log("7");
+
+            //                isInHolder = true;
+            //            }
+
+            //            if (parentTransform.tag == "Bowl")
+            //            {
+            //                Debug.Log("8");
+
+            //                SetKinematic(false);
+            //            }
+            //        }
+            //        else if (requesterTag == "Player" && isInHolder)
+            //        {
+            //            Debug.Log("4");
+
+            //            ToggleTorch();
+            //        }
+            //    }
+            //}
+
+
+        }
+
+        if(interactionRequester.tag == "FirePit")
+        {
+            ToggleTorch();
         }
 
         //Transform requesterItemSlot = null;

@@ -27,7 +27,7 @@ public class HandSlotScript : MonoBehaviour, IItemSlotScript
 
     public void HoldItem(GameObject item)
     {
-        Debug.Log("hand is picking up item");
+        //Debug.Log("hand is picking up item");
         objectInSlot = item;
         isSlotFull = true;
         ToggleHandModel();
@@ -47,10 +47,6 @@ public class HandSlotScript : MonoBehaviour, IItemSlotScript
 
     public void DropHeldItem()
     {
-        //objectInSlot.transform.parent = null;
-
-        //objectInSlot.GetComponent<IPickableObjectScript>().isDetached = true;
-
         objectInSlot = null;
         isSlotFull = false;
 

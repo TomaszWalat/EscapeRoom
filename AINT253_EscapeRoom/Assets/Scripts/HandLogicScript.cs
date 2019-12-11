@@ -29,7 +29,7 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
         //slotList = new List<IItemSlotScript>(GetComponentsInChildren<IItemSlotScript>());
 
         FindItemSlots();
-        Debug.Log(slotList.ToString());
+        //Debug.Log(slotList.ToString());
         CheckIfSlotAreFull();
 
         m_RightHandSlot = m_RightHand.GetComponent<IItemSlotScript>();
@@ -64,8 +64,8 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                 bool observedIsNotFull = false;
                 if (observedObject.TryGetComponent(out AbstractSlotHolderScript slotHolderScript))
                 {
-                    Debug.Log("I am: " + gameObject.ToString());
-                    Debug.Log("found a slot holder in observed: " + slotHolderScript.ToString());
+                    //Debug.Log("I am: " + gameObject.ToString());
+                    //Debug.Log("found a slot holder in observed: " + slotHolderScript.ToString());
 
                     observedHasSlots = slotHolderScript.hasItemSlot;
                     observedIsNotFull = !slotHolderScript.allSlotsFull;
@@ -78,8 +78,17 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                     {
                         if (m_RightHandSlot.isSlotFull)
                         {
-                            observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(m_RightHandSlot.objectInSlot);
-                            m_RightHandSlot.DropHeldItem();
+                            if(m_RightHandSlot.objectInSlot.tag == "Torch" && m_RightHandSlot.objectInSlot.GetComponent<TorchLogicScript>().isTorchLit)
+                            {
+                                observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(m_RightHandSlot.objectInSlot);
+                            }
+                            else
+                            {
+                                observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(m_RightHandSlot.objectInSlot);
+                                m_RightHandSlot.DropHeldItem();
+                            }
+                            
+                            
                         }
                     }
                 }
@@ -87,6 +96,7 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                 {
                     if (observedHasSlots)
                     {
+
                         if (observedIsNotFull)
                         {
                             if (m_RightHandSlot.isSlotFull && m_RightHandSlot.objectInSlot.tag == "Torch")
@@ -99,7 +109,6 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                         {
                             observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
                         }
-                        
                     }
                 }
                 else if(observedTag == "ClayPot")
@@ -115,15 +124,23 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                     if (!m_RightHandSlot.isSlotFull)
                     {
                         HoldItem(observedObject);
+
                         observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
                     }
                 }
                 else if(observedTag == "Torch")
                 {
-                    if (!m_RightHandSlot.isSlotFull)
+                    if(!m_RightHandSlot.isSlotFull)
                     {
                         HoldItem(observedObject);
                         observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
+                    }
+                }
+                else if(observedTag == "FirePit")
+                {
+                    if(m_RightHandSlot.objectInSlot.tag == "Torch")
+                    {
+                        m_RightHandSlot.objectInSlot.GetComponent<IInteractionLogicScript>().InteractionRequest(observedObject);
                     }
                 }
             }
