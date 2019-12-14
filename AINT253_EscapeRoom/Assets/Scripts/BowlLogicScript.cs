@@ -164,7 +164,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
             //Debug.Log("bow contents is correct");
             puzzlePieceComplete = true;
             puzzleElementScript.AddPuzzlePiece(gameObject);
-            bowlModel.GetComponent<MeshRenderer>().material.color = Color.red;
+            bowlModel.GetComponent<MeshRenderer>().material.color = Color.white;
         }
     }
 

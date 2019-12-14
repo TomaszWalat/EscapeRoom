@@ -18,7 +18,7 @@ public class PuzzleElementScript : MonoBehaviour
         puzzlePieces = new List<IPuzzlePieceScript>();
         elementComplete = false;
         puzzleElementTemplate = puzzleTemplate.puzzleTemplateList;
-        Debug.Log("template: " + puzzleElementTemplate.ToString());
+        //Debug.Log("template: " + puzzleElementTemplate.ToString());
 
         //CheckPieces();
     }
@@ -31,29 +31,29 @@ public class PuzzleElementScript : MonoBehaviour
 
     public void CheckPieces()
     {
-        Debug.Log("pieces count: " + puzzlePieces.Count);
-        //Debug.Log("template: " + puzzleElementTemplate.ToString());
-        Debug.Log("template count: " + puzzleElementTemplate.Count);
-        Debug.Log("I am: " + gameObject.ToString());
+        //Debug.Log("pieces count: " + puzzlePieces.Count);
+        ////Debug.Log("template: " + puzzleElementTemplate.ToString());
+        //Debug.Log("template count: " + puzzleElementTemplate.Count);
+        //Debug.Log("I am: " + gameObject.ToString());
         if (puzzlePieces.Count == puzzleElementTemplate.Count)
         {
-            Debug.Log("1");
+            //Debug.Log("1");
             elementComplete = true;
             for (int i = 0; i < puzzlePieces.Count; i++)
             {
                 if (puzzlePieces[i] != puzzleElementTemplate[i] || !puzzlePieces[i].puzzlePieceComplete)
                 {
-                    Debug.Log("puzzle piece: " + puzzlePieces[i].ToString());
-                    Debug.Log("template piece: " + puzzleElementTemplate[i].ToString());
-                    Debug.Log("puzzle piece is complete: " + puzzlePieces[i].puzzlePieceComplete);
-                    Debug.Log("2");
+                    //Debug.Log("puzzle piece: " + puzzlePieces[i].ToString());
+                    //Debug.Log("template piece: " + puzzleElementTemplate[i].ToString());
+                    //Debug.Log("puzzle piece is complete: " + puzzlePieces[i].puzzlePieceComplete);
+                    //Debug.Log("2");
                     elementComplete = false;
                 }
             }
         }
         else
         {
-            Debug.Log("3");
+            //Debug.Log("3");
             elementComplete = false;
         }
         

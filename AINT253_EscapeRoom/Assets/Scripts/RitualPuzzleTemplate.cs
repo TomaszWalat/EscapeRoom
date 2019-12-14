@@ -21,7 +21,7 @@ public class RitualPuzzleTemplate : AbstractPuzzleTemplate
 
         //FindPuzzlePieces();
 
-        Debug.Log("ritual template count: " + puzzleTemplateList.Count);
+        //Debug.Log("ritual template count: " + puzzleTemplateList.Count);
     }
 
     // Update is called once per frame

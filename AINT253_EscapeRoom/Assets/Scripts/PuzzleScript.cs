@@ -36,6 +36,14 @@ public class PuzzleScript : MonoBehaviour, IActionScript
         }
     }
 
+    public void PrintElementList()
+    {
+        for (int i = 0; i < puzzleElements.Count; i++)
+        {
+            Debug.Log("element " + i + ": " + puzzleElements[i].ToString());
+        }
+    }
+
     public void PerformAction()
     {
 

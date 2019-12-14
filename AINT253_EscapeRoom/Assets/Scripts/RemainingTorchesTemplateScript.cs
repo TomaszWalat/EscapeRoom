@@ -30,7 +30,7 @@ public class RemainingTorchesTemplateScript : AbstractPuzzleTemplate
 
     public void PrimeElement()
     {
-            Debug.Log("primeing element");
+            //Debug.Log("primeing element");
         for(int i = 0; i < puzzleTemplateList.Count; i++)
         {
             TorchHolderLogicScript temp = puzzleTemplateList[i] as TorchHolderLogicScript;
