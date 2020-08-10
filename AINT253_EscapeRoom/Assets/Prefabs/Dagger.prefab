@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4188574744654420843}
   - component: {fileID: 7989658099726841695}
   - component: {fileID: 7989658099726841681}
+  - component: {fileID: -3629057575174590559}
   m_Layer: 0
   m_Name: Dagger
   m_TagString: Untagged
@@ -109,3 +110,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5273384, y: 1.9777786, z: 0.24128456}
   m_Center: {x: -0.0000076290635, y: 0.011111203, z: 0.000015256057}
+--- !u!114 &-3629057575174590559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7989658099726841682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ad26792f9082747a7425fd0c0d0c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

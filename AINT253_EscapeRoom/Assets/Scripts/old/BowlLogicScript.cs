@@ -21,7 +21,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
 
     public PuzzleElementScript puzzleElementScript;
     public BowlContentsTemplateScript contentsTemplateScript;
-    public GameObject bowlModel;
+    public GameObject bowlParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -164,7 +164,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
             //Debug.Log("bow contents is correct");
             puzzlePieceComplete = true;
             puzzleElementScript.AddPuzzlePiece(gameObject);
-            bowlModel.GetComponent<MeshRenderer>().material.color = Color.white;
+            bowlParticles.GetComponent<MeshRenderer>().material.color = Color.white;
         }
     }
 

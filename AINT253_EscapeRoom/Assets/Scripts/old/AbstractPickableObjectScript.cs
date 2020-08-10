@@ -1,5 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+//using System.Diagnostics;
 using UnityEngine;
 
 public abstract class AbstractPickableObjectScript : MonoBehaviour
@@ -35,6 +38,8 @@ public abstract class AbstractPickableObjectScript : MonoBehaviour
 
     protected void GetDropped()
     {
+        UnityEngine.Debug.Log("I am " + this.ToString());
+        UnityEngine.Debug.Log("My parent is " + parentTransform);
         parentTransform.GetComponentInParent<IInteractionLogicScript>().InteractionRequest(gameObject);
         parentTransform = null;
         transform.SetParent(null);

@@ -10,6 +10,7 @@ TagManager:
   - TorchHolder
   - Ingredient
   - FirePit
+  - Lighter
   layers:
   - Default
   - TransparentFX

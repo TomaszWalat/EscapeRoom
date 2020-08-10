@@ -45,7 +45,7 @@ public class LookingAtScript : MonoBehaviour
 
         if (objectObserved != null && objectObserved.layer == interactableLayer)
         {
-            interactablePointerImageObject.GetComponent<Image>().sprite = objectObserved.GetComponent<InteractableObjectScript>().GetInteractableImage();
+            //interactablePointerImageObject.GetComponent<Image>().sprite = objectObserved.GetComponent<InteractableObjectScript>().GetInteractableImage();
             interactablePointerImageObject.GetComponent<Image>().color = Color.red;
 
             if(Input.GetKeyDown(KeyCode.E))

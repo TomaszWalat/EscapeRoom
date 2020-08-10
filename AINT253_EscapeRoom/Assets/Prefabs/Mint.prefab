@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1049736524247153284}
   - component: {fileID: 1049736524247153286}
   - component: {fileID: 1049736524247153287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaf_mint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 1049736524862947795}
   - component: {fileID: 1049736524862947797}
   - component: {fileID: 1049736524862947794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaf_mint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 1049736525202783493}
   - component: {fileID: 1049736525202783495}
   - component: {fileID: 1049736525202783492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaf_mint (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,9 +243,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1049736525207634692}
-  m_Layer: 0
+  - component: {fileID: -7289055256457594844}
+  - component: {fileID: 5693998313836994450}
+  - component: {fileID: 7264076929525440327}
+  - component: {fileID: -3823628846422546750}
+  m_Layer: 8
   m_Name: Mint
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +273,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7289055256457594844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049736525207634693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ad26792f9082747a7425fd0c0d0c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5693998313836994450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049736525207634693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b9d225270e65d409c46830afccf2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &7264076929525440327
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049736525207634693}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &-3823628846422546750
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049736525207634693}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &1049736525842517840
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +338,7 @@ GameObject:
   - component: {fileID: 1049736525842517843}
   - component: {fileID: 1049736525842517845}
   - component: {fileID: 1049736525842517842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaf_mint (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +416,7 @@ GameObject:
   - component: {fileID: 8528872611244863927}
   - component: {fileID: 9099995914075949621}
   - component: {fileID: 6501337712456540714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leaf_mint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
