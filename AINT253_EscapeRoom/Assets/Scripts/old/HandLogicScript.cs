@@ -127,10 +127,16 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                     {
                         if (isRightHandOccupied)
                         {
-                            if (rightHandSlotObjTag == "Torch" && rightHandSlotObject.GetComponent<TorchLogicScript>().isTorchLit || m_RightHandSlot.objectInSlot.tag == "Lighter")
+                            if (rightHandSlotObjTag == "Torch" && rightHandSlotObject.GetComponent<TorchLogicScript>().isTorchLit)// || m_RightHandSlot.objectInSlot.tag == "Lighter")
                             {
                                 observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(rightHandSlotObject);
                                 //isRightHandOccupied = true;
+                            }
+                            else if (m_RightHandSlot.objectInSlot.tag == "Lighter")
+                            {
+                                m_RightHandSlot.objectInSlot.GetComponent<PickableObjectScript>().GetDropped();
+                                observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(rightHandSlotObject);
+                                DropItem(rightHandSlotObject);
                             }
                             else
                             {
@@ -142,10 +148,16 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                         }
                         else if (isLeftHandOccupied)
                         {
-                            if (leftHandSlotObjTag == "Torch" && leftHandSlotObject.GetComponent<TorchLogicScript>().isTorchLit || m_LeftHandSlot.objectInSlot.tag == "Lighter")
+                            if (leftHandSlotObjTag == "Torch" && leftHandSlotObject.GetComponent<TorchLogicScript>().isTorchLit)// || m_LeftHandSlot.objectInSlot.tag == "Lighter")
                             {
                                 observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(leftHandSlotObject);
                                 //isLeftHandOccupied = true;
+                            }
+                            else if (m_LeftHandSlot.objectInSlot.tag == "Lighter")
+                            {
+                                m_LeftHandSlot.objectInSlot.GetComponent<PickableObjectScript>().GetDropped();
+                                observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(leftHandSlotObject);
+                                DropItem(leftHandSlotObject);
                             }
                             else //if (m_LeftHandSlot.objectInSlot.tag == "Lighter")
                             {

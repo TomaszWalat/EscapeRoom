@@ -139,6 +139,8 @@ public class LighterLogicScript : PickableObjectScript, IInteractionLogicScript,
 
         }
 
+        
+
         //Transform requesterItemSlot = null;
 
         //if (interactionRequester != null)
@@ -155,4 +157,8 @@ public class LighterLogicScript : PickableObjectScript, IInteractionLogicScript,
         //    }
         //}
     }
+    //public void SignalObservers()
+    //{
+
+    //}
 }

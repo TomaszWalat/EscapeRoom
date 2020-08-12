@@ -222,7 +222,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
         if(CheckBowlContents())
         {
             //DeactivateItems();
-            DeleteItemsInSlots();
+            Invoke("DeleteItemsInSlots", 1.0f);
             //Debug.Log("bow contents is correct");
             puzzlePieceComplete = true;
             puzzleElementScript.AddPuzzlePiece(gameObject);
@@ -262,31 +262,60 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
         bool ritualComplete = false;
         //Debug.Log("0");
         //Debug.Log("rutual status: " + ritualComplete);
-        if(slotList.Count == contentsTemplateScript.puzzleTemplateList.Count + 1)
+        if(slotList.Count >= contentsTemplateScript.puzzleTemplateList.Count + 1)
         {
             //Debug.Log("1");
             ritualComplete = true;
+
+            //string ingredientType = "ingredient";
+
         //Debug.Log("rutual status: " + ritualComplete);
             for (int i = 0; i < contentsTemplateScript.puzzleTemplateList.Count; i++)
             {
+                //try
+                //{
+                //    contentsTemplateScript.puzzleTemplateList[i] as LighterLogicScript;
+                //}
+                //catch (Exception e)
+                //{
+                //    ingredientType
+                //}
+
                 //Debug.Log("1." + i);
 
                 bool itemFound = false;
                 //Debug.Log("item found: " + itemFound);
 
-                for (int j = 0; j < slotList.Count -1; j++)
+                for (int j = 0; j < slotList.Count; j++)
                 {
                     //Debug.Log("1." + i + "." + j);
 
-                    //Debug.Log("template object type: " + (contentsTemplateScript.puzzleTemplateList[i] as IngredientLogicScript).gameObject.name.ToString() + "(Clone)");
-                    //Debug.Log("ingredient type: " + slotList[i].objectInSlot.name.ToString());
-
-                    if ((contentsTemplateScript.puzzleTemplateList[i] as IngredientLogicScript).gameObject.name + "(Clone)" == slotList[j].objectInSlot.name)
+                    if (slotList[j].objectInSlot != null)
                     {
-                        //Debug.Log("2");
+                        Debug.Log("template object type: " + ((contentsTemplateScript.puzzleTemplateList[i] as PickableObjectScript).gameObject.name.ToString()));
 
-                        itemFound = true;
-                        //Debug.Log("item found: " + itemFound);
+                        //if(contentsTemplateScript.puzzleTemplateList[i].TryGetComponent<IngredientLogicScript>(out IngredientLogicScript ingredientLogicScript))
+                        //{
+                        //    Debug.Log("@@@@@@@@@@@@@ This works @@@@@@@@@@@@@@");
+                        //}
+
+                        if ((contentsTemplateScript.puzzleTemplateList[i] as PickableObjectScript).gameObject.name == slotList[j].objectInSlot.name.Replace("(Clone)", ""))
+                        {
+                            //Debug.Log("2");
+
+                            Debug.Log("ingredient type: " + slotList[i].objectInSlot.name.ToString().Replace("(Clone)", ""));
+                            itemFound = true;
+                            //Debug.Log("item found: " + itemFound);
+                        }
+
+
+                        //if ((contentsTemplateScript.puzzleTemplateList[i] as IngredientLogicScript).gameObject.name + "(Clone)" == slotList[j].objectInSlot.name)
+                        //{
+                        //    //Debug.Log("2");
+
+                        //    itemFound = true;
+                        //    //Debug.Log("item found: " + itemFound);
+                        //}
                     }
                 }
                 //Debug.Log("item found: " + itemFound);

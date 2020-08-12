@@ -15,7 +15,7 @@ public class InGameEventControllerScript : MonoBehaviour
     [SerializeField]
     private PuzzleManagerScript m_puzzleManagerScript;
     [SerializeField]
-    private DoorwayBehaviour m_doorwayBehaviour;
+    private DoorwayLogicScript m_doorwayLogicScript;
 
     [SerializeField]
     private GameObject m_caveSystemPartTwo;
@@ -72,7 +72,8 @@ public class InGameEventControllerScript : MonoBehaviour
     public void puzzleTwoCompleted()
     {
         m_puzzleTwoComplete = true;
-        Exit();
+        m_doorwayLogicScript.OpenDoorway();
+        //Exit();
     }
 
     private void changeCaveSystem()

@@ -135,6 +135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c97a048c99f6854cbb4479f6062db1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <isPickable>k__BackingField: 0
+  <isDetached>k__BackingField: 0
+  <parentTransform>k__BackingField: {fileID: 0}
+  <bowl>k__BackingField: {fileID: 0}
+  <isInBowl>k__BackingField: 0
+  <puzzlePieceComplete>k__BackingField: 0
 --- !u!1 &4440726340154704986
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +243,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -0.009998687, z: 0.89500004, w: -0.004999971}
+  m_BoundingSphereOverride: {x: 7.140082e+31, y: 2.691459e+20, z: 45993390, w: 1.6031375e-10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4004,16 +4010,16 @@ ParticleSystem:
       emitProbability: 1
   LightsModule:
     enabled: 0
-    ratio: 0
-    light: {fileID: 0}
-    randomDistribution: 1
-    color: 1
+    ratio: 1
+    light: {fileID: 6265025261428891490}
+    randomDistribution: 0
+    color: 0
     range: 1
     intensity: 1
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 10
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4116,7 +4122,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    maxLights: 20
+    maxLights: 2
   TrailModule:
     enabled: 0
     mode: 0

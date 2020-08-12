@@ -51,6 +51,7 @@ public class AbstractPuzzleTemplate : MonoBehaviour
 
     public bool IsPieceOnTemplate(IPuzzlePieceScript puzzlePiece)
     {
+        PrintPieceList();
         return puzzleTemplateList.Contains(puzzlePiece);
     }
 

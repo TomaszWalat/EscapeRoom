@@ -102,7 +102,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -0.009998687, z: 0.89500004, w: -0.004999971}
+  m_BoundingSphereOverride: {x: 4.295e-42, y: 1.02e-43, z: 1.3563128e-19, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3869,10 +3869,10 @@ ParticleSystem:
       emitProbability: 1
   LightsModule:
     enabled: 0
-    ratio: 0
-    light: {fileID: 0}
-    randomDistribution: 1
-    color: 1
+    ratio: 1
+    light: {fileID: 5730747519495923787}
+    randomDistribution: 0
+    color: 0
     range: 1
     intensity: 1
     rangeCurve:
@@ -3981,7 +3981,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    maxLights: 20
+    maxLights: 1
   TrailModule:
     enabled: 0
     mode: 0
@@ -5000,6 +5000,8 @@ MonoBehaviour:
   <isPickable>k__BackingField: 0
   <isDetached>k__BackingField: 0
   <parentTransform>k__BackingField: {fileID: 0}
+  <isTorchLit>k__BackingField: 0
+  <isInHolder>k__BackingField: 0
   torchHead: {fileID: 4742306879983841326}
 --- !u!1 &5877788324687597275
 GameObject:
@@ -8876,14 +8878,14 @@ ParticleSystem:
     enabled: 0
     ratio: 1
     light: {fileID: 5730747519495923787}
-    randomDistribution: 1
-    color: 1
+    randomDistribution: 0
+    color: 0
     range: 1
     intensity: 1
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -8936,7 +8938,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
