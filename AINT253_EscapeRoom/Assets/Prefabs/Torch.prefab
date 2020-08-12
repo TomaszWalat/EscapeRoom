@@ -4903,7 +4903,6 @@ GameObject:
   - component: {fileID: 7656397693406000317}
   - component: {fileID: 1551352305476693378}
   - component: {fileID: 4802279084716705431}
-  - component: {fileID: 4485425066013431351}
   - component: {fileID: 8385643882680629686}
   - component: {fileID: 4630204692890490776}
   m_Layer: 8
@@ -4974,22 +4973,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4485425066013431351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5472295034788892964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cec2df0d49a95b43af1087b034e195e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTorchLit: 1
-  flameParticles: {fileID: 5877788324687597275}
-  flameLight: {fileID: 3120840359400694661}
-  flame: {fileID: 4742306879983841326}
 --- !u!114 &8385643882680629686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5014,8 +4997,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d537216a477cba44fa6844d4a1f745ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlitTorch: {fileID: 2100000, guid: 66777f43ce8dc414586cac2e21c3731c, type: 2}
-  litTorch: {fileID: 2100000, guid: f01badefd273a1242b205333afcc8fc8, type: 2}
+  <isPickable>k__BackingField: 0
+  <isDetached>k__BackingField: 0
+  <parentTransform>k__BackingField: {fileID: 0}
   torchHead: {fileID: 4742306879983841326}
 --- !u!1 &5877788324687597275
 GameObject:

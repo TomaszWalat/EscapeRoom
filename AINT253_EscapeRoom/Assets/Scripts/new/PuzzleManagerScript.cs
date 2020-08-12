@@ -9,10 +9,10 @@ public class PuzzleManagerScript : MonoBehaviour
     [SerializeField]
     private PuzzleScript m_puzzleTwo;
 
-    [SerializeField]
-    private bool m_puzzleOneComplete;
-    [SerializeField]
-    private bool m_puzzleTwoComplete;
+    [field: SerializeField]
+    public bool m_puzzleOneComplete { get; private set; }
+    [field: SerializeField]
+    public bool m_puzzleTwoComplete { get; private set; }
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +20,6 @@ public class PuzzleManagerScript : MonoBehaviour
         m_puzzleOneComplete = false;
         m_puzzleTwoComplete = false;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void puzzleOneCompleted()
@@ -36,5 +30,11 @@ public class PuzzleManagerScript : MonoBehaviour
     public void puzzleTwoCompleted()
     {
         m_puzzleTwoComplete = true;
+    }
+
+    public void checkPuzzles()
+    {
+        m_puzzleOneComplete = m_puzzleOne.puzzleComplete;
+        m_puzzleTwoComplete = m_puzzleTwo.puzzleComplete;
     }
 }

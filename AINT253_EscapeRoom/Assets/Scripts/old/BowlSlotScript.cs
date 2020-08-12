@@ -8,6 +8,7 @@ public class BowlSlotScript : MonoBehaviour, IItemSlotScript, ISelfDestructScrip
 
     public bool isSlotFull { get; private set; }
 
+    [field: SerializeField]
     public GameObject objectInSlot { get; private set; }
 
     public Transform slotTransform { get; set; }
@@ -48,7 +49,7 @@ public class BowlSlotScript : MonoBehaviour, IItemSlotScript, ISelfDestructScrip
 
     public void SelfDestruct()
     {
-        Debug.Log("I'm self destructing");
+        //Debug.Log("I'm self destructing");
         Destroy(this, secondsDelay);
     }
 }

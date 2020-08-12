@@ -48,7 +48,7 @@ public class LookingAtScript : MonoBehaviour
             //interactablePointerImageObject.GetComponent<Image>().sprite = objectObserved.GetComponent<InteractableObjectScript>().GetInteractableImage();
             interactablePointerImageObject.GetComponent<Image>().color = Color.red;
 
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 //Debug.Log(objectObserved.ToString());
                 m_InteractionLogicScript.InteractionRequest(objectObserved);

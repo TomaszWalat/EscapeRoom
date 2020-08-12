@@ -1,21 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using System.Diagnostics;
 using UnityEngine;
 
-public class TorchLogicScript : AbstractPickableObjectScript, IInteractionLogicScript, IActionScript
+public class TorchLogicScript : PickableObjectScript, IInteractionLogicScript, IActionScript
 {
 
     //public bool isPickable { get; private set; }
     //public bool isDetached { get; private set; }
 
     //public Transform parentTransform { get; private set; }
-
+    [field: SerializeField]
     public bool isTorchLit { get; private set; }
-
+    [field: SerializeField]
     public bool isInHolder { get; private set; }
 
-    public Material unlitTorch;
-    public Material litTorch;
+    //public Material unlitTorch;
+    //public Material litTorch;
 
     public GameObject torchHead;
 
@@ -45,8 +46,8 @@ public class TorchLogicScript : AbstractPickableObjectScript, IInteractionLogicS
 
             string requesterTag = interactionRequester.tag;
 
-            Debug.Log("I am: " + gameObject.ToString());
-            Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
+            //Debug.Log("I am: " + gameObject.ToString());
+            //Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
 
             parentHasSlots = slotHolderScript.hasItemSlot;
             parentIsNotFull = !slotHolderScript.allSlotsFull;
@@ -77,7 +78,6 @@ public class TorchLogicScript : AbstractPickableObjectScript, IInteractionLogicS
             {
                 SetKinematic(false);
             }
-
             //Debug.Log("1");
 
             //if(isInHolder && parentTransform.GetComponentInParent<AbstractSlotHolderScript>().FindObject(gameObject))
@@ -145,7 +145,7 @@ public class TorchLogicScript : AbstractPickableObjectScript, IInteractionLogicS
 
         }
 
-        if(interactionRequester.tag == "FirePit")
+        if(interactionRequester.tag == "FirePit" || interactionRequester.tag == "Lighter")
         {
             ToggleTorch();
         }
@@ -222,14 +222,17 @@ public class TorchLogicScript : AbstractPickableObjectScript, IInteractionLogicS
 
     private void ToggleTorch()
     {
+        //UnityEngine.Debug.Log("Getting toggled >>> " + isTorchLit + " ---> " + !isTorchLit);
         if (isTorchLit)
         {
-            torchHead.SetActive(false);//torchHead.GetComponent<MeshRenderer>().material = unlitTorch;
+            torchHead.SetActive(!isTorchLit);//torchHead.GetComponent<MeshRenderer>().material = unlitTorch;
         }
         else
         {
-            torchHead.SetActive(true);//torchHead.GetComponent<MeshRenderer>().material = litTorch;
+            torchHead.SetActive(!isTorchLit);//torchHead.GetComponent<MeshRenderer>().material = litTorch;
         }
         isTorchLit = !isTorchLit;
+
+
     }
 }

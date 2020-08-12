@@ -12,17 +12,20 @@ ScriptsOnlyBuild:
     - FPSCameraControllerScript
     - HandLogicScript
     - HandSlotScript
+    - InGameEventControllerScript
     - IngredientLogicScript
+    - InteractableCanvasScript
     - InteractableObjectScript
+    - LighterLogicScript
     - LookingAtScript
     - MainMenuScript
     - PuzzleElementScript
+    - PuzzleManagerScript
     - PuzzleScript
     - RaycastHitScript
     - RemainingTorchesTemplateScript
     - RitualPuzzleTemplate
     - TemplatePuzzlePiece
-    - TorchBehaviour
     - TorchHolderLogicScript
     - TorchHolderSlotScript
     - TorchLogicScript
@@ -43,6 +46,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/InGame.unity:
@@ -76,6 +80,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 102
@@ -85,77 +91,81 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9712}
+      Script: {instanceID: 9734}
     - Class: 114
-      Script: {instanceID: 9812}
+      Script: {instanceID: 9834}
     - Class: 114
-      Script: {instanceID: 9814}
+      Script: {instanceID: 9878}
     - Class: 114
-      Script: {instanceID: 9856}
+      Script: {instanceID: 9912}
     - Class: 114
-      Script: {instanceID: 9890}
+      Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 9938}
+      Script: {instanceID: 9974}
     - Class: 114
-      Script: {instanceID: 9952}
+      Script: {instanceID: 10022}
     - Class: 114
-      Script: {instanceID: 10000}
+      Script: {instanceID: 10328}
     - Class: 114
-      Script: {instanceID: 10306}
+      Script: {instanceID: 10372}
     - Class: 114
-      Script: {instanceID: 10350}
+      Script: {instanceID: 10406}
     - Class: 114
-      Script: {instanceID: 10384}
+      Script: {instanceID: 10468}
     - Class: 114
-      Script: {instanceID: 10446}
+      Script: {instanceID: 10510}
     - Class: 114
-      Script: {instanceID: 10488}
+      Script: {instanceID: 10736}
     - Class: 114
-      Script: {instanceID: 10722}
+      Script: {instanceID: 10746}
     - Class: 114
-      Script: {instanceID: 10774}
+      Script: {instanceID: 10798}
     - Class: 114
-      Script: {instanceID: 10784}
+      Script: {instanceID: 10808}
     - Class: 114
-      Script: {instanceID: 10882}
+      Script: {instanceID: 10820}
     - Class: 114
-      Script: {instanceID: 11016}
+      Script: {instanceID: 10898}
     - Class: 114
-      Script: {instanceID: 11044}
+      Script: {instanceID: 10906}
     - Class: 114
-      Script: {instanceID: 11118}
+      Script: {instanceID: 11040}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 11248}
+      Script: {instanceID: 11142}
     - Class: 114
-      Script: {instanceID: 11288}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 11306}
+      Script: {instanceID: 11272}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 11312}
     - Class: 114
-      Script: {instanceID: 11560}
+      Script: {instanceID: 11330}
     - Class: 114
-      Script: {instanceID: 11602}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11620}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11658}
+      Script: {instanceID: 11588}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 11694}
+      Script: {instanceID: 11648}
     - Class: 114
-      Script: {instanceID: 11696}
+      Script: {instanceID: 11686}
+    - Class: 114
+      Script: {instanceID: 11710}
+    - Class: 114
+      Script: {instanceID: 11722}
     - Class: 114
       Script: {instanceID: 11724}
     - Class: 114
-      Script: {instanceID: 19196}
+      Script: {instanceID: 11752}
     - Class: 114
-      Script: {instanceID: 19198}
+      Script: {instanceID: 20552}
     - Class: 114
-      Script: {instanceID: 19250}
+      Script: {instanceID: 148614}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -175,6 +185,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -208,31 +220,31 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9712}
+      Script: {instanceID: 9734}
     - Class: 114
-      Script: {instanceID: 9890}
+      Script: {instanceID: 9912}
     - Class: 114
-      Script: {instanceID: 9938}
+      Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 10350}
+      Script: {instanceID: 10372}
     - Class: 114
-      Script: {instanceID: 10386}
+      Script: {instanceID: 10408}
     - Class: 114
-      Script: {instanceID: 10774}
+      Script: {instanceID: 10798}
     - Class: 114
-      Script: {instanceID: 11016}
+      Script: {instanceID: 11040}
     - Class: 114
-      Script: {instanceID: 11032}
+      Script: {instanceID: 11056}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 11306}
+      Script: {instanceID: 11330}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11696}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 373540}
+      Script: {instanceID: 11724}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -352,7 +364,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: 933c822e4ba038e33b3744f71af43d44
+      Hash: d8dcabe93a8a56c2ebcbeb729cb31ff8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HandSlotScript
@@ -670,7 +682,7 @@ ScriptsOnlyBuild:
     className: DragRigidbody
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 3996e3cb3550c4324689aa158bcec998
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: IngredientLogicScript
@@ -886,6 +898,12 @@ ScriptsOnlyBuild:
     className: CarController
   - hash:
       serializedVersion: 2
+      Hash: 710b115553ad149920ee66ee30d9e951
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LighterLogicScript
+  - hash:
+      serializedVersion: 2
       Hash: afb50ce66d698178fef291bff2534d02
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -958,7 +976,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 6266d9c145600213c6c1643f0a7c1e29
+      Hash: 9feac6573afa9157f97826cd8b5482c5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleManagerScript
@@ -1072,7 +1090,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 39773fac9e184ef86aa2a2b55d24cfc6
+      Hash: 123b4a163ebad234a70d0c329d71bb2f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TorchLogicScript
@@ -1204,7 +1222,13 @@ ScriptsOnlyBuild:
     className: AeroplaneUserControl2Axis
   - hash:
       serializedVersion: 2
-      Hash: 326f40d642c96d6fb276c9da5b80c98b
+      Hash: 3996e3cb3550c4324689aa158bcec998
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PickableObjectScript
+  - hash:
+      serializedVersion: 2
+      Hash: 2f80c3ffab36af898d39f4994506ae59
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TorchHolderSlotScript
@@ -1274,6 +1298,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: TimedObjectDestructor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuScript
+  - hash:
+      serializedVersion: 2
+      Hash: d78cf59c34cf746cfbace5cc6dbf24d2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InGameEventControllerScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1462,10 +1498,10 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: d507912b01a43da817c950a6cd2224c8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MainMenuScript
+    className: InteractableCanvasScript
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

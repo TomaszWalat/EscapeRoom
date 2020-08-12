@@ -8,21 +8,31 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
 
     public bool allSlotsFull { get; protected set; }
 
+    [field: SerializeField]
     public List<IItemSlotScript> slotList { get; protected set; }
+
+    private int numberOfSlots = 0;
+    private int numberOfFreeSlots = 0;
 
     protected void FindItemSlots()
     {
         slotList = new List<IItemSlotScript>(GetComponentsInChildren<IItemSlotScript>());
-        
+
+        numberOfSlots = slotList.Count;
+        numberOfFreeSlots = slotList.Count;
+
         if(slotList.Count > 0)
         {
             hasItemSlot = true;
-            //Debug.Log("I am: " + gameObject);
-            //Debug.Log("I have slots: " + hasItemSlot);
+            
         }
+        //Debug.Log("I am: " + gameObject);
+        //Debug.Log("I have slots: " + hasItemSlot);
+        //Debug.Log("I am method: FindItemSlots()");
+        //PrintSlotList();
     }
 
-    protected void CheckIfSlotAreFull()
+    protected bool CheckIfSlotAreFull()
     {
         IItemSlotScript freeSlot = FindFreeSlot(gameObject);
         if(freeSlot != null)
@@ -35,8 +45,10 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         }
         //Debug.Log("I am: " + gameObject);
         //Debug.Log("I am full: " + allSlotsFull);
+        //Debug.Log("I am method: CheckIfSlotAreFull()");
+        ////PrintSlotList();
 
-
+        return (numberOfSlots > numberOfFreeSlots);
     }
 
     protected IItemSlotScript FindFreeSlot(GameObject requester)
@@ -50,6 +62,8 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
                 freeSlotScript = slotList[i];
             }
         }
+        //Debug.Log("I am method: FindFreeSlot()");
+        //PrintSlotList();
         return freeSlotScript;
     }
 
@@ -64,6 +78,8 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
                 slotScript = slotList[i];
             }
         }
+        //Debug.Log("I am method: FindSlotByName()");
+        //PrintSlotList();
         return slotScript;
     }
 
@@ -78,7 +94,8 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
                 temp = slotList[i].objectInSlot;
             }
         }
-
+        //Debug.Log("I am method: FindObjectByTag()");
+        //PrintSlotList();
         return temp;
     }
 
@@ -93,7 +110,8 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
                 objectFound = true;
             }
         }
-
+        //Debug.Log("I am method: FindObject()");
+        //PrintSlotList();
         return objectFound;
     }
 
@@ -109,7 +127,8 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
                 //Debug.Log("found the object's slot");
             }
         }
-
+        //Debug.Log("I am method: GetSlotOfObject()");
+        //PrintSlotList();
         return objectSlot;
     }
 
@@ -124,7 +143,8 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
                 slotIndex = i;
             }
         }
-
+        //Debug.Log("I am method: GetIndexOfSlot()");
+        //PrintSlotList();
         return slotIndex;
     }
 
@@ -149,7 +169,11 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
 
             freeSlot.HoldItem(item);
 
+            numberOfFreeSlots--;
+
             CheckIfSlotAreFull();
+            //Debug.Log("I am method: HoldItem()");
+            //PrintSlotList();
         }
     }
 
@@ -159,53 +183,93 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         if (slotList[slotIndex].isSlotFull)
         {
             temp = slotList[slotIndex].GiveHeldItem();
+
+            numberOfFreeSlots++;
+
             CheckIfSlotAreFull();
         }
+        //Debug.Log("I am method: GiveItem()");
+        //PrintSlotList();
         return temp;
     }
 
     protected void DropItem(GameObject itemToDrop)
     {
-        if(FindObject(itemToDrop))
+        //int objectIndex = -1;
+
+        for (int i = 0; i < slotList.Count; i++)
         {
-            int objectIndex = 0;
-
-            for (int i = 0; i < slotList.Count; i++)
+            if (slotList[i].objectInSlot == itemToDrop)
             {
-                if (slotList[i].objectInSlot == itemToDrop)
-                {
-                    objectIndex = i;
-                }
+                //objectIndex = i;
+                slotList[i].DropHeldItem();
+                numberOfFreeSlots++;
             }
-
-            slotList[objectIndex].DropHeldItem();
-
-            CheckIfSlotAreFull();
         }
+
+        //if (objectIndex > -1)
+        //{
+        //    slotList[objectIndex].DropHeldItem();
+        //}
+
+        
+
+        CheckIfSlotAreFull();
+        //Debug.Log("I am method: DropItem()");
+        //PrintSlotList();
     }
+
+    //protected void DropItem(GameObject itemToDrop)
+    //{
+    //    if (itemToDrop != null)
+    //    {
+    //        if (FindObject(itemToDrop))
+    //        {
+    //            int objectIndex = 0;
+
+    //            for (int i = 0; i < slotList.Count; i++)
+    //            {
+    //                if (slotList[i].objectInSlot == itemToDrop)
+    //                {
+    //                    objectIndex = i;
+    //                }
+    //            }
+
+    //            slotList[objectIndex].DropHeldItem();
+
+    //            numberOfFreeSlots++;
+
+    //            CheckIfSlotAreFull();
+    //            Debug.Log("I am method: DropItem()");
+    //PrintSlotList();
+    //        }
+    //    }
+    //}
 
     protected void PrintSlotList()
     {
-        Debug.Log("");
+        //Debug.Log("");
         Debug.Log("##### printing starting #####");
-        Debug.Log("");
+        //Debug.Log("");
         Debug.Log("Number of slots: " + slotList.Count);
-        Debug.Log(" ");
-        for (int i = 0; i < slotList.Count - 1; i++)
-        {
-            Debug.Log("Slot " + i + ": " + slotList[i].ToString());
-            if(slotList[i].objectInSlot != null)
-            {
-                Debug.Log("        Contents: " + slotList[i].objectInSlot.ToString());
-            }
-            else
-            {
-                Debug.Log("        Contents: null");
-            }
+        Debug.Log("Number of slots field: " + numberOfSlots);
+        Debug.Log("Number of free slots field: " + numberOfFreeSlots);
+        //Debug.Log(" ");
+        //for (int i = 0; i < slotList.Count; i++)
+        //{
+        //    Debug.Log("Slot " + i + ": " + slotList[i].ToString());
+        //    if(slotList[i].objectInSlot != null)
+        //    {
+        //        Debug.Log("        Contents: " + slotList[i].objectInSlot.ToString());
+        //    }
+        //    else
+        //    {
+        //        Debug.Log("        Contents: null");
+        //    }
 
-        }
-        Debug.Log("Slot " + (slotList.Count - 1) + ": " + slotList[slotList.Count - 1].ToString());
-        Debug.Log("");
+        //}
+        //Debug.Log("Slot " + (slotList.Count - 1) + ": " + slotList[slotList.Count - 1].ToString());
+        //Debug.Log("");
         Debug.Log("----- printing done -----");
         Debug.Log("");
     }

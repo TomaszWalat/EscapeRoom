@@ -49,16 +49,11 @@ public class AbstractPuzzleTemplate : MonoBehaviour
         //PrintPieceList();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public bool IsPieceOnTemplate(IPuzzlePieceScript puzzlePiece)
     {
+        return puzzleTemplateList.Contains(puzzlePiece);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void PrintPieceList()
     {
         for (int i = 0; i < puzzleTemplateList.Count; i++)

@@ -11,10 +11,4 @@ public class BowlContentsTemplateScript : AbstractPuzzleTemplate
 
         FindPuzzlePieces();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using System.Diagnostics;
 using UnityEngine;
 
 public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript, IActionScript, IPuzzlePieceScript
@@ -17,6 +18,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
 
     public Transform bowlHolderSlotTransform;
 
+    [field: SerializeField]
     public bool puzzlePieceComplete { get; private set; }
 
     public PuzzleElementScript puzzleElementScript;
@@ -57,21 +59,30 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                 //////    requesterIsNotFull = !slotHolderScript.allSlotsFull;
                 //////}
 
-                if (requesterTag == "Player")
+                //if (requesterTag == "Player")
+                //{
+                //    interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
+                //}
+                if (requesterTag == "Ingredient" || requesterTag == "Torch")
                 {
-                    interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
-                }
-                else if (requesterTag == "Ingredient" || requesterTag == "Torch")
-                {
+                    //if (requesterTag == "Lighter")
+                    //{
+                    //    if (CheckBowlContents())
+                    //    { 
+
+                    //    }
+                    //}
                     bool isTorchLit = false;
 
-                    if(interactionRequester.TryGetComponent(out TorchLogicScript torchLogicScript))
+                    if (interactionRequester.TryGetComponent(out TorchLogicScript torchLogicScript))
                     {
                         isTorchLit = torchLogicScript.isTorchLit;
                     }
 
+
                     if (!isTorchLit)
                     {
+
                         if (!FindObject(interactionRequester))
                         {
                             HoldItem(interactionRequester);
@@ -99,9 +110,58 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                             }
                         }
                     }
-                    else if(isTorchLit)
+                    else if (isTorchLit)
                     {
                         //Debug.Log("about to call perform action");
+                        PerformAction();
+                    }
+
+                }
+                else if (requesterTag == "Lighter")
+                {
+                    bool lighterIsIngredient = false;
+
+                    Debug.Log("We have a Lighter");
+                    lighterIsIngredient = contentsTemplateScript.IsPieceOnTemplate(interactionRequester.GetComponent<IPuzzlePieceScript>());
+                    Debug.Log("Lighter is puzzle piece === " + lighterIsIngredient);
+
+                    if(lighterIsIngredient)
+                    {
+                        if (!FindObject(interactionRequester))
+                        {
+                            HoldItem(interactionRequester);
+                            interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
+
+                            BowlSlotScript newSlot = gameObject.AddComponent<BowlSlotScript>();
+                            newSlot.bowlSlotTransform = bowlHolderSlotTransform;
+                            newSlot.slotTransform = bowlHolderSlotTransform;
+                            slotList.Add(newSlot);
+
+                            if (requesterTag == "Lighter")
+                            {
+                                PerformAction();
+                            }
+                        }
+                        else if (FindObject(interactionRequester))
+                        {
+                            BowlSlotScript temp = GetSlotOfObject(interactionRequester) as BowlSlotScript;
+
+                            int requesterSlotIndex = GetIndexOfSlot(GetSlotOfObject(interactionRequester));
+                            DropItem(interactionRequester);
+
+                            if (requesterSlotIndex > 0)
+                            {
+                                if (!temp.isSlotFull)
+                                {
+                                    temp.SelfDestruct();
+                                    slotList.RemoveAt(requesterSlotIndex);
+                                }
+                            }
+                        }
+
+                    }
+                    else
+                    {
                         PerformAction();
                     }
                 }
@@ -161,10 +221,39 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
         //Debug.Log("preform action called");
         if(CheckBowlContents())
         {
+            //DeactivateItems();
+            DeleteItemsInSlots();
             //Debug.Log("bow contents is correct");
             puzzlePieceComplete = true;
             puzzleElementScript.AddPuzzlePiece(gameObject);
-            bowlParticles.GetComponent<MeshRenderer>().material.color = Color.white;
+            bowlParticles.SetActive(true);
+            puzzleElementScript.CheckPieces();
+        }
+    }
+
+    private void DeactivateItems()
+    {
+        foreach (IItemSlotScript item in slotList)
+        {
+            if (item.objectInSlot != null)
+            {
+                item.objectInSlot.GetComponent<PickableObjectScript>().SetPickability(false);
+            }
+        }
+    }
+
+    private void DeleteItemsInSlots()
+    {
+        foreach (IItemSlotScript item in slotList)
+        {
+            if (item.objectInSlot != null)
+            {
+                GameObject temp = item.objectInSlot;
+
+                item.DropHeldItem();
+
+                Destroy(temp);
+            }
         }
     }
 

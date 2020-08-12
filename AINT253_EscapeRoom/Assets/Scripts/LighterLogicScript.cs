@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LighterLogicScript : AbstractPickableObjectScript, IInteractionLogicScript
+public class LighterLogicScript : PickableObjectScript, IInteractionLogicScript, IPuzzlePieceScript
 {
+    [field: SerializeField]
     public GameObject bowl { get; private set; }
-
+    [field: SerializeField]
     public bool isInBowl { get; private set; }
+    [field: SerializeField]
+    public bool puzzlePieceComplete { get; private set; }
+
+    int counterL = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +20,7 @@ public class LighterLogicScript : AbstractPickableObjectScript, IInteractionLogi
         isDetached = true;
         isInBowl = false;
         parentTransform = gameObject.transform;
+        puzzlePieceComplete = true;
     }
 
     // Update is called once per frame
@@ -32,12 +38,14 @@ public class LighterLogicScript : AbstractPickableObjectScript, IInteractionLogi
 
             string requesterTag = interactionRequester.tag;
 
-            Debug.Log("I am: " + gameObject.ToString());
-            Debug.Log("found a slot holder in parent: " + slotHolderScript.ToString());
+            //Debug.Log(counterL + " L >>> I am: " + gameObject.ToString());
+            //Debug.Log(counterL + " L >>> found a slot holder in parent: " + slotHolderScript.ToString());
+            counterL++;
 
             parentHasSlots = slotHolderScript.hasItemSlot;
             parentIsNotFull = !slotHolderScript.allSlotsFull;
 
+            
             if (parentHasSlots)// && parentIsNotFull)
             {
                 Transform newParentTransform = null;
@@ -64,7 +72,6 @@ public class LighterLogicScript : AbstractPickableObjectScript, IInteractionLogi
             {
                 SetKinematic(false);
             }
-
             //Debug.Log("1");
 
             //if(isInHolder && parentTransform.GetComponentInParent<AbstractSlotHolderScript>().FindObject(gameObject))

@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class PuzzleElementScript : MonoBehaviour
 {
-    public bool elementComplete;
+    [field: SerializeField]
+    public bool elementComplete { get; private set; }
 
+    [field: SerializeField]
     public List<IPuzzlePieceScript> puzzlePieces { get; private set; }
 
     public List<IPuzzlePieceScript> puzzleElementTemplate { get; private set; }
 
-    public AbstractPuzzleTemplate puzzleTemplate;
+    [SerializeField]
+    private AbstractPuzzleTemplate puzzleTemplate;
+
+    [SerializeField]
+    private PuzzleScript m_puzzleScript;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +26,7 @@ public class PuzzleElementScript : MonoBehaviour
         puzzleElementTemplate = puzzleTemplate.puzzleTemplateList;
         //Debug.Log("template: " + puzzleElementTemplate.ToString());
 
-        //CheckPieces();
+        CheckPieces();
     }
 
     // Update is called once per frame
@@ -55,6 +61,11 @@ public class PuzzleElementScript : MonoBehaviour
         {
             //Debug.Log("3");
             elementComplete = false;
+        }
+
+        if (elementComplete)
+        {
+            m_puzzleScript.CheckElements();
         }
         
     }

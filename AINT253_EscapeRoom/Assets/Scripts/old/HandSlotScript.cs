@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class HandSlotScript : MonoBehaviour, IItemSlotScript
 {
+    [SerializeField]
     private bool isHandUp;
-
+    [field: SerializeField]
     public string slotName { get; private set; }
-
+    [field: SerializeField]
     public bool isSlotFull { get; private set; }
-
+    [field: SerializeField]
     public GameObject objectInSlot { get; private set; }
-
+    [field: SerializeField]
     public Transform slotTransform { get; private set; }
 
     public Transform handSlotTransform;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InGameEventControllerScript : MonoBehaviour
 {
@@ -50,17 +51,28 @@ public class InGameEventControllerScript : MonoBehaviour
             m_caveSystemPartTwoBlockade.SetActive(false);
             playerHandLogicScript.InteractionRequest(lighter);
         }
+
+        if(m_puzzleManagerScript.m_puzzleOneComplete)
+        { 
+            puzzleOneCompleted();
+
+        }
+        if (m_puzzleManagerScript.m_puzzleTwoComplete)
+        {
+            puzzleTwoCompleted();
+        }
     }
 
     public void puzzleOneCompleted()
     {
         m_puzzleOneComplete = true;
-        changeCaveSystem();
+        //changeCaveSystem();
     }
 
     public void puzzleTwoCompleted()
     {
         m_puzzleTwoComplete = true;
+        Exit();
     }
 
     private void changeCaveSystem()
@@ -75,6 +87,10 @@ public class InGameEventControllerScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             m_playerIsByEntrance = true;
+            if(m_puzzleOneComplete)
+            {
+                changeCaveSystem();
+            }
         }
     }
 
@@ -84,5 +100,10 @@ public class InGameEventControllerScript : MonoBehaviour
         {
             m_playerIsByEntrance = false;
         }
+    }
+
+    public void Exit()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }

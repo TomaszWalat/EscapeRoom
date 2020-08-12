@@ -48,8 +48,8 @@ public class TorchHolderLogicScript : AbstractSlotHolderScript, IInteractionLogi
 
                 if (interactionRequester.TryGetComponent(out AbstractSlotHolderScript slotHolderScript))
                 {
-                    Debug.Log("I am: " + gameObject.ToString());
-                    Debug.Log("found a slot holder in requester: " + slotHolderScript.ToString());
+                    //Debug.Log("I am: " + gameObject.ToString());
+                    //Debug.Log("found a slot holder in requester: " + slotHolderScript.ToString());
 
                     requesterHasSlot = slotHolderScript.hasItemSlot;
                     requesterIsNotFull = !slotHolderScript.allSlotsFull;
@@ -192,7 +192,7 @@ public class TorchHolderLogicScript : AbstractSlotHolderScript, IInteractionLogi
         }
         else
         {
-            if(slotList[0].objectInSlot != null)
+            if(slotList.Count > 0)
             {
                 if (!(slotList[0].objectInSlot.GetComponent<TorchLogicScript>().isTorchLit))
                 {

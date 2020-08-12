@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionLogicScript, IPuzzlePieceScript
+public class IngredientLogicScript : PickableObjectScript, IInteractionLogicScript, IPuzzlePieceScript
 {
     public GameObject bowl { get; private set; }
 
@@ -48,7 +48,6 @@ public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionL
 
             //Debug.Log("parent has slots: " + parentHasSlots);
             //Debug.Log("parent is not full: " + parentIsNotFull);
-
             if (parentHasSlots)// && parentIsNotFull)
             {
                 Transform newParentTransform = null;
@@ -75,7 +74,6 @@ public class IngredientLogicScript : AbstractPickableObjectScript, IInteractionL
             {
                 SetKinematic(false);
             }
-
 
 
         }
