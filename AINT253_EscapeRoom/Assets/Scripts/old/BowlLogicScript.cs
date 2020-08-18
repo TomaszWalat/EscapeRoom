@@ -117,6 +117,19 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                     }
 
                 }
+                else if (requesterTag == "Blood")
+                {
+                    if (!FindObject(interactionRequester))
+                    {
+                        HoldItem(interactionRequester);
+                        //interactionRequester.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
+
+                        BowlSlotScript newSlot = gameObject.AddComponent<BowlSlotScript>();
+                        newSlot.bowlSlotTransform = bowlHolderSlotTransform;
+                        newSlot.slotTransform = bowlHolderSlotTransform;
+                        slotList.Add(newSlot);
+                    }
+                }
                 else if (requesterTag == "Lighter")
                 {
                     bool lighterIsIngredient = false;

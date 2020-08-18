@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - BowlSlotScript
     - CharacterControllerScript
     - ClayPotLogicScript
+    - DoorwayLogicScript
     - FPSCameraControllerScript
     - HandLogicScript
     - HandSlotScript
@@ -22,6 +23,7 @@ ScriptsOnlyBuild:
     - PuzzleElementScript
     - PuzzleManagerScript
     - PuzzleScript
+    - PuzzleScriptElement
     - RaycastHitScript
     - RemainingTorchesTemplateScript
     - RitualPuzzleTemplate
@@ -30,6 +32,8 @@ ScriptsOnlyBuild:
     - TorchHolderSlotScript
     - TorchLogicScript
     - TorchPuzzleTemplate
+    Unity.TextMeshPro.Editor.dll:
+    - TMPro.EditorUtilities.TMP_SettingsEditor
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -105,67 +109,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10022}
     - Class: 114
-      Script: {instanceID: 10328}
+      Script: {instanceID: 10096}
     - Class: 114
-      Script: {instanceID: 10372}
+      Script: {instanceID: 10330}
     - Class: 114
-      Script: {instanceID: 10406}
+      Script: {instanceID: 10374}
     - Class: 114
-      Script: {instanceID: 10468}
+      Script: {instanceID: 10408}
     - Class: 114
-      Script: {instanceID: 10510}
+      Script: {instanceID: 10470}
     - Class: 114
-      Script: {instanceID: 10736}
+      Script: {instanceID: 10512}
     - Class: 114
-      Script: {instanceID: 10746}
+      Script: {instanceID: 10740}
     - Class: 114
-      Script: {instanceID: 10798}
+      Script: {instanceID: 10750}
     - Class: 114
-      Script: {instanceID: 10808}
+      Script: {instanceID: 10802}
     - Class: 114
-      Script: {instanceID: 10820}
+      Script: {instanceID: 10812}
     - Class: 114
-      Script: {instanceID: 10898}
+      Script: {instanceID: 10824}
     - Class: 114
-      Script: {instanceID: 10906}
+      Script: {instanceID: 10902}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 10910}
     - Class: 114
-      Script: {instanceID: 11068}
+      Script: {instanceID: 11044}
     - Class: 114
-      Script: {instanceID: 11142}
+      Script: {instanceID: 11072}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 11146}
     - Class: 114
-      Script: {instanceID: 11272}
+      Script: {instanceID: 11262}
     - Class: 114
-      Script: {instanceID: 11312}
+      Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 11314}
     - Class: 114
-      Script: {instanceID: 11352}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11442}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11588}
+      Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11630}
+      Script: {instanceID: 11448}
     - Class: 114
-      Script: {instanceID: 11648}
+      Script: {instanceID: 11594}
     - Class: 114
-      Script: {instanceID: 11686}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 11710}
+      Script: {instanceID: 11654}
     - Class: 114
-      Script: {instanceID: 11722}
+      Script: {instanceID: 11692}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11716}
     - Class: 114
-      Script: {instanceID: 11752}
+      Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 20552}
+      Script: {instanceID: 11730}
     - Class: 114
-      Script: {instanceID: 148614}
+      Script: {instanceID: 11758}
+    - Class: 114
+      Script: {instanceID: 11764}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -226,25 +232,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 10372}
+      Script: {instanceID: 10374}
     - Class: 114
-      Script: {instanceID: 10408}
+      Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 10798}
+      Script: {instanceID: 10802}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11044}
     - Class: 114
-      Script: {instanceID: 11056}
+      Script: {instanceID: 11060}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 11262}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11440}
     - Class: 114
-      Script: {instanceID: 11500}
+      Script: {instanceID: 11506}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -518,6 +524,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 160f0e587af6028c4992d89e8c8afb0a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DoorwayLogicScript
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -808,6 +820,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 06fbbd8e1bc07cc5b50452ec715085bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PrimingCavePart3Script
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Characters.ThirdPerson
@@ -904,7 +922,7 @@ ScriptsOnlyBuild:
     className: LighterLogicScript
   - hash:
       serializedVersion: 2
-      Hash: afb50ce66d698178fef291bff2534d02
+      Hash: c4a9cdb052cf736242c6456a8470b493
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BowlSlotScript
@@ -976,7 +994,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 9feac6573afa9157f97826cd8b5482c5
+      Hash: c4af185827a1f9f7b7de8d8764a664e0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleManagerScript
@@ -1138,7 +1156,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 72a2d8b4e431f2a65265b8a36bf4fc07
+      Hash: 6b734fc489e31df62f775b3987a127e9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleElementScript
@@ -1210,7 +1228,7 @@ ScriptsOnlyBuild:
     className: CarAudio
   - hash:
       serializedVersion: 2
-      Hash: ba83e7fa116216c2ab872f9d296e5cca
+      Hash: 0173dfa3c95e657f12742c97bfe5fcd6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleScript
@@ -1226,6 +1244,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickableObjectScript
+  - hash:
+      serializedVersion: 2
+      Hash: d507912b01a43da817c950a6cd2224c8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InteractableCanvasScript
   - hash:
       serializedVersion: 2
       Hash: 2f80c3ffab36af898d39f4994506ae59
@@ -1306,7 +1330,7 @@ ScriptsOnlyBuild:
     className: MainMenuScript
   - hash:
       serializedVersion: 2
-      Hash: d78cf59c34cf746cfbace5cc6dbf24d2
+      Hash: e6f3653912b50e4ce0d6f2af0e7fca34
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InGameEventControllerScript
@@ -1438,7 +1462,7 @@ ScriptsOnlyBuild:
     className: RemainingTorchesTemplateScript
   - hash:
       serializedVersion: 2
-      Hash: 19aeeb170108f00dac2bfbf5ffe22552
+      Hash: 75b01767d881f0b3939a46cdcbfe54d5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BowlLogicScript
@@ -1466,6 +1490,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BowlContentsTemplateScript
+  - hash:
+      serializedVersion: 2
+      Hash: 2b50bb4a396958879a25e508ba61af6b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PuzzleScriptElement
   - hash:
       serializedVersion: 2
       Hash: 85c97bcc5f84eeb0999d75902803b99d
@@ -1496,12 +1526,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: d507912b01a43da817c950a6cd2224c8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InteractableCanvasScript
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

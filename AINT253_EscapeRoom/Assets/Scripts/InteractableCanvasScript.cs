@@ -50,7 +50,7 @@ public class InteractableCanvasScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Tab) && !isLogOpen && !isPauseMenuOpen)
         {
@@ -64,7 +64,7 @@ public class InteractableCanvasScript : MonoBehaviour
             ToggleLog();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (isMapOpen)
             {
@@ -108,6 +108,19 @@ public class InteractableCanvasScript : MonoBehaviour
         //    ToggleInteractablePanel();
         //    //Cursor.lockState = CursorLockMode.None;
         //}
+        if(isPauseMenuOpen)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1;
+        }
+
         pausePanel.SetActive(isPauseMenuOpen);
     }
 
@@ -121,17 +134,17 @@ public class InteractableCanvasScript : MonoBehaviour
     {
         isInteractiblePanelUp = !isInteractiblePanelUp;
         interactablePanel.SetActive(isInteractiblePanelUp);
-        if (isInteractiblePanelUp)
-        {
-            //Debug.Log("Locking cursor");
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        else if (!isInteractiblePanelUp)
-        {
-            //Debug.Log("Unlocking Cursor");
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        //if (isInteractiblePanelUp)
+        //{
+        //    //Debug.Log("Locking cursor");
+        //    Cursor.lockState = CursorLockMode.None;
+        //    Cursor.visible = true;
+        //}
+        //else //if (!isInteractiblePanelUp)
+        //{
+        //    //Debug.Log("Unlocking Cursor");
+        //    Cursor.lockState = CursorLockMode.Locked;
+        //    Cursor.visible = false;
+        //}
     }
 }

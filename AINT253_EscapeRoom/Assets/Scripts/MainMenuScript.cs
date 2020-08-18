@@ -8,6 +8,7 @@ public class MainMenuScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
         //SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 

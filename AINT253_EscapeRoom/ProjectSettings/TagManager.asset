@@ -12,6 +12,14 @@ TagManager:
   - FirePit
   - Lighter
   - TorchHead
+  - Info_puzzleOne_Clue
+  - Info_puzzleTwo_Clue_p1
+  - Info_puzzleTwo_Clue_p2
+  - Info_puzzleTwo_Clue_p3
+  - Info_puzzleTwo_Clue_p4
+  - Info_doorway_gorg
+  - Dagger
+  - Blood
   layers:
   - Default
   - TransparentFX
