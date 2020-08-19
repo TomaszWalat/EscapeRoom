@@ -20,6 +20,7 @@ TagManager:
   - Info_doorway_gorg
   - Dagger
   - Blood
+  - Info_puzzleClue
   layers:
   - Default
   - TransparentFX

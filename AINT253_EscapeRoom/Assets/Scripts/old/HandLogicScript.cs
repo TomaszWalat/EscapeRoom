@@ -286,7 +286,7 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                         //isLeftHandOccupied = true;
                     }
                 }
-                else if (observedTag == "Dagger")
+                else if (observedTag == "Dagger" || observedTag == "Info_puzzleClue")
                 {
                     observedObject.GetComponent<IInteractionLogicScript>().InteractionRequest(gameObject);
                 }

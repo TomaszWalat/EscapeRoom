@@ -38,6 +38,8 @@ public class InGameEventControllerScript : MonoBehaviour
     void Start()
     {
         m_gameStarted = false;
+        m_puzzleOneComplete = false;
+        m_puzzleTwoComplete = false;
     }
 
     // Update is called once per frame
@@ -45,6 +47,8 @@ public class InGameEventControllerScript : MonoBehaviour
     {
         if (!m_gameStarted)
         {
+
+            StartCoroutine(player.GetComponent<CameraShakeScript>().Shake(2.5f, 0.5f));
             m_gameStarted = true;
             m_caveSystemPartTwo.SetActive(true);
             m_caveSystemPartThree.SetActive(false);
@@ -52,26 +56,34 @@ public class InGameEventControllerScript : MonoBehaviour
             playerHandLogicScript.InteractionRequest(lighter);
         }
 
-        if(m_puzzleManagerScript.m_puzzleOneComplete)
-        { 
+        if(m_puzzleManagerScript.m_puzzleOneComplete && !m_puzzleOneComplete)
+        {
             puzzleOneCompleted();
-
         }
-        if (m_puzzleManagerScript.m_puzzleTwoComplete)
+        if (m_puzzleManagerScript.m_puzzleTwoComplete && !m_puzzleTwoComplete)
         {
             puzzleTwoCompleted();
         }
+        //if(Input.GetKeyDown(KeyCode.L))
+        //{
+        //    StartCoroutine(player.GetComponent<CameraShakeScript>().Shake(5.0f, 0.1f));
+        //}
     }
 
     public void puzzleOneCompleted()
     {
         m_puzzleOneComplete = true;
+
+        player.GetComponent<CameraShakeScript>().SetShakeConstantly(true);
+        StartCoroutine(player.GetComponent<CameraShakeScript>().ShakeConstant(1.5f, 0.25f));
         //changeCaveSystem();
     }
 
     public void puzzleTwoCompleted()
     {
         m_puzzleTwoComplete = true;
+
+        StartCoroutine(player.GetComponent<CameraShakeScript>().Shake(1.5f, 0.5f));
         m_doorwayLogicScript.OpenDoorway();
         //Exit();
     }
@@ -90,6 +102,7 @@ public class InGameEventControllerScript : MonoBehaviour
             m_playerIsByEntrance = true;
             if(m_puzzleOneComplete)
             {
+                player.GetComponent<CameraShakeScript>().SetShakeConstantly(false);
                 changeCaveSystem();
             }
         }
