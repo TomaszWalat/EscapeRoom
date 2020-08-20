@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
+using MilkShake;
 
 public class InGameEventControllerScript : MonoBehaviour
 {
@@ -16,7 +18,8 @@ public class InGameEventControllerScript : MonoBehaviour
     private PuzzleManagerScript m_puzzleManagerScript;
     [SerializeField]
     private DoorwayLogicScript m_doorwayLogicScript;
-
+    [SerializeField]
+    private DoorwayProximityScript doorwayProximityScript;
     [SerializeField]
     private GameObject m_caveSystemPartTwo;
     [SerializeField]
@@ -34,21 +37,60 @@ public class InGameEventControllerScript : MonoBehaviour
     [SerializeField]
     private bool m_playerIsByEntrance;
 
+    [SerializeField]
+    private bool m_playerIsByExit;
+
+
+    [SerializeField]
+    private GameObject playerCamera;
+    [SerializeField]
+    private GameObject playerHands;
+
+    [SerializeField]
+    private LogEventsScript logEventsScript;
+
+    [SerializeField]
+    private WallCarvingLogicScript wallLoreOne;
+    [SerializeField]
+    private WallCarvingLogicScript wallLoreTwo;
+    [SerializeField]
+    private WallCarvingLogicScript wallLoreThree;
+    [SerializeField]
+    private WallCarvingLogicScript wallLoreFour;
+
+    [SerializeField]
+    private bool allLoreExplored;
+
+    [SerializeField]
+    private bool allInformationDiscovered;
+
+    //[SerializeField]
+    //private GameObject shakeSource;
+
+    //[SerializeField]
+    //private ShakePreset shakePreset;
+
     // Start is called before the first frame update
     void Start()
     {
+        allInformationDiscovered = false;
+        allLoreExplored = false;
         m_gameStarted = false;
         m_puzzleOneComplete = false;
         m_puzzleTwoComplete = false;
+        m_playerIsByExit = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if (!m_gameStarted)
         {
-
-            StartCoroutine(player.GetComponent<CameraShakeScript>().Shake(2.5f, 0.5f));
+            StartCoroutine(playerCamera.GetComponent<CameraShakeScript>().Shake(2.5f, 0.5f));
+            StartCoroutine(playerHands.GetComponent<CameraShakeScript>().Shake(2.5f, 0.01f));
+            logEventsScript.TriggerEvent_Beginning();
+            //StartCoroutine(player.GetComponent<CameraShakeScript>().Shake(2.5f, 0.5f));
             m_gameStarted = true;
             m_caveSystemPartTwo.SetActive(true);
             m_caveSystemPartThree.SetActive(false);
@@ -56,26 +98,41 @@ public class InGameEventControllerScript : MonoBehaviour
             playerHandLogicScript.InteractionRequest(lighter);
         }
 
-        if(m_puzzleManagerScript.m_puzzleOneComplete && !m_puzzleOneComplete)
+        if (!m_puzzleOneComplete && m_puzzleManagerScript.m_puzzleOneComplete)
         {
             puzzleOneCompleted();
         }
-        if (m_puzzleManagerScript.m_puzzleTwoComplete && !m_puzzleTwoComplete)
+        if (!m_puzzleTwoComplete && m_puzzleManagerScript.m_puzzleTwoComplete)
         {
             puzzleTwoCompleted();
         }
-        //if(Input.GetKeyDown(KeyCode.L))
+        //if (Input.GetKeyDown(KeyCode.L))
         //{
-        //    StartCoroutine(player.GetComponent<CameraShakeScript>().Shake(5.0f, 0.1f));
+        //    //player.GetComponentInChildren<Shaker>().Shake(shakePreset);
+        //    //shakeSource.GetComponent<CinemachineImpulseSource>().GenerateImpulse();
+        //    StartCoroutine(playerCamera.GetComponent<CameraShakeScript>().Shake(5.0f, 0.1f));
+        //    StartCoroutine(playerHands.GetComponent<CameraShakeScript>().Shake(5.0f, 0.01f));
         //}
+
+        if (!allInformationDiscovered && m_puzzleTwoComplete && doorwayProximityScript.GetStatus())
+        {
+            allInformationDiscovered = true;
+            logEventsScript.TriggerEvent_Ending();
+        }
+
+        allLoreExplored = wallLoreOne.GetHasBeenTranslated() && wallLoreTwo.GetHasBeenTranslated() && wallLoreThree.GetHasBeenTranslated() && wallLoreFour.GetHasBeenTranslated() && m_doorwayLogicScript.GetHasBeenClicked();
     }
 
     public void puzzleOneCompleted()
     {
         m_puzzleOneComplete = true;
 
-        player.GetComponent<CameraShakeScript>().SetShakeConstantly(true);
-        StartCoroutine(player.GetComponent<CameraShakeScript>().ShakeConstant(1.5f, 0.25f));
+        playerCamera.GetComponent<CameraShakeScript>().SetShakeConstantly(true);
+        playerHands.GetComponent<CameraShakeScript>().SetShakeConstantly(true);
+        StartCoroutine(playerCamera.GetComponent<CameraShakeScript>().ShakeConstant(1.5f, 0.25f));
+        StartCoroutine(playerHands.GetComponent<CameraShakeScript>().ShakeConstant(1.5f, 0.01f));
+        logEventsScript.TriggerEvent_PuzzleOneFinished();
+        //StartCoroutine(player.GetComponent<CameraShakeScript>().ShakeConstant(1.5f, 0.25f));
         //changeCaveSystem();
     }
 
@@ -83,7 +140,10 @@ public class InGameEventControllerScript : MonoBehaviour
     {
         m_puzzleTwoComplete = true;
 
-        StartCoroutine(player.GetComponent<CameraShakeScript>().Shake(1.5f, 0.5f));
+        //StartCoroutine(player.GetComponent<CameraShakeScript>().Shake(1.5f, 0.5f));
+        StartCoroutine(playerCamera.GetComponent<CameraShakeScript>().Shake(1.5f, 0.5f));
+        StartCoroutine(playerHands.GetComponent<CameraShakeScript>().Shake(1.5f, 0.01f));
+        logEventsScript.TriggerEvent_PuzzleTwoFinished();
         m_doorwayLogicScript.OpenDoorway();
         //Exit();
     }
@@ -102,7 +162,8 @@ public class InGameEventControllerScript : MonoBehaviour
             m_playerIsByEntrance = true;
             if(m_puzzleOneComplete)
             {
-                player.GetComponent<CameraShakeScript>().SetShakeConstantly(false);
+                playerCamera.GetComponent<CameraShakeScript>().SetShakeConstantly(false);
+                playerHands.GetComponent<CameraShakeScript>().SetShakeConstantly(false);
                 changeCaveSystem();
             }
         }
@@ -119,5 +180,20 @@ public class InGameEventControllerScript : MonoBehaviour
     public void Exit()
     {
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
+    public bool GetPuzzleOneStatus()
+    {
+        return m_puzzleOneComplete;
+    }
+
+    public bool GetPuzzleTwoStatus()
+    {
+        return m_puzzleTwoComplete;
+    }
+
+    public bool GetAllLoreExplored()
+    {
+        return allLoreExplored;
     }
 }

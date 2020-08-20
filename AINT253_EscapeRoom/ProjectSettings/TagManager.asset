@@ -21,6 +21,7 @@ TagManager:
   - Dagger
   - Blood
   - Info_puzzleClue
+  - Altar
   layers:
   - Default
   - TransparentFX

@@ -42,4 +42,9 @@ public class WallCarvingLogicScript : MonoBehaviour, IInteractionLogicScript
             }
         }
     }
+
+    public bool GetHasBeenTranslated()
+    {
+        return hasBeenTranslated;
+    }
 }

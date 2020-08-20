@@ -16,6 +16,9 @@ public class DaggerLogicScript : MonoBehaviour, IInteractionLogicScript
     [SerializeField]
     private bool daggerUsed;
 
+    [SerializeField]
+    private InGameEventControllerScript m_eventController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +27,9 @@ public class DaggerLogicScript : MonoBehaviour, IInteractionLogicScript
         altarBlood.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void InteractionRequest(GameObject interactionRequester)
     {
-        if (interactionRequester != null && !daggerUsed)
+        if (interactionRequester != null && !daggerUsed && m_eventController.GetPuzzleOneStatus() && m_eventController.GetAllLoreExplored())
         {
             if(interactionRequester.tag == "Player")
             {

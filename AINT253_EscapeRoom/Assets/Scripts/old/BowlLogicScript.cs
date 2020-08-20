@@ -25,6 +25,9 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
     public BowlContentsTemplateScript contentsTemplateScript;
     public GameObject bowlParticles;
 
+    [SerializeField]
+    private InGameEventControllerScript m_eventController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -110,7 +113,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                             }
                         }
                     }
-                    else if (isTorchLit)
+                    else if (isTorchLit && m_eventController.GetPuzzleOneStatus() && m_eventController.GetAllLoreExplored())
                     {
                         //Debug.Log("about to call perform action");
                         PerformAction();
@@ -150,7 +153,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                             newSlot.slotTransform = bowlHolderSlotTransform;
                             slotList.Add(newSlot);
 
-                            if (requesterTag == "Lighter")
+                            if (requesterTag == "Lighter" && m_eventController.GetPuzzleOneStatus() && m_eventController.GetAllLoreExplored())
                             {
                                 PerformAction();
                             }
@@ -173,7 +176,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                         }
 
                     }
-                    else
+                    else if (m_eventController.GetPuzzleOneStatus() && m_eventController.GetAllLoreExplored())
                     {
                         PerformAction();
                     }
@@ -275,7 +278,7 @@ public class BowlLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
         bool ritualComplete = false;
         //Debug.Log("0");
         //Debug.Log("rutual status: " + ritualComplete);
-        if(slotList.Count >= contentsTemplateScript.puzzleTemplateList.Count + 1)
+        if(slotList.Count >= contentsTemplateScript.puzzleTemplateList.Count + 1) //something to come back to
         {
             //Debug.Log("1");
             ritualComplete = true;

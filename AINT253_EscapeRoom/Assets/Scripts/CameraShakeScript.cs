@@ -5,12 +5,16 @@ using UnityEngine;
 public class CameraShakeScript : MonoBehaviour
 {
     //Code sourced from: http://unitytipsandtricks.blogspot.com/2013/05/camera-shake.html
+    //Look at https://www.youtube.com/watch?v=9A9yj8KnM8c
 
     [SerializeField]
     private GameObject camera;
 
     [SerializeField]
     private Vector3 originalCamPos;
+
+    [SerializeField]
+    private Vector3 originOffset;
 
     [SerializeField]
     private bool shakeConstantly;
@@ -48,7 +52,7 @@ public class CameraShakeScript : MonoBehaviour
             x *= magnitude * damper;
             y *= magnitude * damper;
 
-            camera.transform.localPosition = new Vector3(x, y + 0.75f, originalCamPos.z);
+            camera.transform.localPosition = new Vector3(x + originOffset.x, y + originOffset.y, originalCamPos.z);
 
             yield return null;
         }
@@ -68,7 +72,7 @@ public class CameraShakeScript : MonoBehaviour
             x *= magnitude;
             y *= magnitude;
 
-            camera.transform.localPosition = new Vector3(x, y + 0.75f, originalCamPos.z);
+            camera.transform.localPosition = new Vector3(x + originOffset.x, y + originOffset.y, originalCamPos.z);
 
             yield return null;
         }
@@ -91,7 +95,7 @@ public class CameraShakeScript : MonoBehaviour
                 x *= magnitude * damper;
                 y *= magnitude * damper;
 
-                camera.transform.localPosition = new Vector3(x, y + 0.75f, originalCamPos.z);
+                camera.transform.localPosition = new Vector3(x + originOffset.x, y + originOffset.y, originalCamPos.z);
 
                 yield return null;
             }

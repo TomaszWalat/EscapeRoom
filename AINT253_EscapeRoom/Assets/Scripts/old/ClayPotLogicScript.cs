@@ -10,6 +10,17 @@ public class ClayPotLogicScript : MonoBehaviour, IInteractionLogicScript
 
     private bool canSpawnItem;
 
+    //[SerializeField]
+    //private InGameEventControllerScript m_eventController;
+
+    //[SerializeField]
+    //private TextMeshProUGUI textMeshProUGUI;
+
+    //[SerializeField]
+    //private Text textStorage;
+
+    //[SerializeField]
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +65,10 @@ public class ClayPotLogicScript : MonoBehaviour, IInteractionLogicScript
                 }
             }
         }
+        //else if(!m_eventController.GetPuzzleOneStatus())
+        //{
+
+        //}
     }
 
     private void DelayPickUp()

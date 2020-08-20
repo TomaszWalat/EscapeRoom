@@ -186,7 +186,7 @@ Transform:
   m_Children:
   - {fileID: 1195064037}
   m_Father: {fileID: 586244191}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &10567138
 PrefabInstance:
@@ -754,6 +754,92 @@ Transform:
   m_Father: {fileID: 421218283572520464}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &79219972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 79219973}
+  - component: {fileID: 79219975}
+  - component: {fileID: 79219974}
+  m_Layer: 5
+  m_Name: PuzzleTwo_text_doorway
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &79219973
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79219972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &79219974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79219972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\nThis must be it. The doorway to Atlantis! But it\u2019s sealed. Or
+    maybe this is it, a symbolic doorway leading to nowhere\u2026 Hmmm, I doubt it
+    though, I can feel there is something strange about it, something abnormal, it\u2019s
+    like an energy radiating out and at the same time a force pulling me in. It\u2019s
+    strange, it\u2019s like the Gorgoneion carved into it is penetrating through me,
+    trying to read me, to sense my intentions. Gorgoneion is an apotropaic amulet
+    used to protect from and ward off evil, foes and those bearing bad intentions
+    towards its bearer. I need to find a way to unlock it."
+--- !u!222 &79219975
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79219972}
+  m_CullTransparentMesh: 0
 --- !u!1 &81132974
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +901,7 @@ Transform:
   - {fileID: 2027352602}
   - {fileID: 280340111}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &82692522
 PrefabInstance:
@@ -1045,6 +1131,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40ae8ac37a91a2748a87a4037af236a7, type: 3}
+--- !u!1 &96713288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96713290}
+  - component: {fileID: 96713289}
+  m_Layer: 0
+  m_Name: Hands
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &96713289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96713288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d078cfbcbe3ae1f409ac353efc4ac658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 96713288}
+  originalCamPos: {x: 0, y: 0, z: 0}
+  originOffset: {x: 0, y: 0, z: 0}
+  shakeConstantly: 0
+--- !u!4 &96713290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96713288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 390381066}
+  - {fileID: 832400789}
+  m_Father: {fileID: 586244189}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &99230599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,7 +1365,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 735304188}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!199 &109910699
 ParticleSystemRenderer:
@@ -6013,6 +6148,96 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &111951668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 111951669}
+  - component: {fileID: 111951670}
+  - component: {fileID: 111951672}
+  - component: {fileID: 111951671}
+  m_Layer: 5
+  m_Name: Viewport Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &111951669
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111951668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 570543226}
+  m_Father: {fileID: 323836660}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 800, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &111951670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111951668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &111951671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111951668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6981132, g: 0.62368625, b: 0.44455323, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &111951672
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111951668}
+  m_CullTransparentMesh: 0
 --- !u!4 &114595446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9136877983480104292, guid: a330f2427ffe89a4086a878e48de6726,
@@ -12157,7 +12382,7 @@ GameObject:
   - component: {fileID: 250062300}
   m_Layer: 8
   m_Name: PuzzleTwo_Clue_3
-  m_TagString: Info_puzzleTwo_Clue_p3
+  m_TagString: Info_puzzleClue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17449,7 +17674,7 @@ Transform:
   m_LocalScale: {x: 0.75, y: 1, z: 0.75}
   m_Children: []
   m_Father: {fileID: 586244191}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &285484381
 MeshRenderer:
@@ -17843,7 +18068,7 @@ GameObject:
   - component: {fileID: 298248441}
   m_Layer: 8
   m_Name: PuzzleTwo_Clue_2
-  m_TagString: Info_puzzleTwo_Clue_p2
+  m_TagString: Info_puzzleClue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18270,6 +18495,76 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 279654066}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &323836659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323836660}
+  - component: {fileID: 323836661}
+  m_Layer: 5
+  m_Name: Log Scroll View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &323836660
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323836659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 111951669}
+  - {fileID: 808370649}
+  m_Father: {fileID: 935023530}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 800, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &323836661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323836659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 570543226}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 2
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 5
+  m_Viewport: {fileID: 111951669}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 808370650}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &324407144
 GameObject:
   m_ObjectHideFlags: 0
@@ -18686,7 +18981,7 @@ RectTransform:
   - {fileID: 1482162256}
   - {fileID: 1092447956}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23550,12 +23845,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3043143700691560951}
-  - {fileID: 8809210632665302443}
-  - {fileID: 5589040323059058837}
-  - {fileID: 8608878802555593926}
-  - {fileID: 7971465190098858302}
-  - {fileID: 4381547544160233861}
+  - {fileID: 2063803685}
+  - {fileID: 2000693222}
   m_Father: {fileID: 735304188}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23826,6 +24117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390381066}
   - component: {fileID: 390381067}
+  - component: {fileID: 390381068}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Player
@@ -23846,7 +24138,7 @@ Transform:
   m_Children:
   - {fileID: 1805346277}
   - {fileID: 341443868}
-  m_Father: {fileID: 586244189}
+  m_Father: {fileID: 96713290}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &390381067
@@ -23868,6 +24160,21 @@ MonoBehaviour:
   <slotTransform>k__BackingField: {fileID: 0}
   handSlotTransform: {fileID: 341443868}
   handModel: {fileID: 1805346276}
+--- !u!114 &390381068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390381065}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c11265b855408d42af33d62691f5194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1001 &394139066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25354,7 +25661,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2092681288}
-  m_RootOrder: 4
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25392,12 +25699,16 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '
-
-
-    New Text'
+  m_Text: "\n\n\t\u201CTo worship one of them was enough to offend and make existence
+    harder, but once the worship of both started, surging both with power, thus dividing
+    him on both fronts, once they started to turn their faith further from him, he
+    decided to strike the Atlantians down, diminishing the powers of both his opponents
+    at the same time. He turned the seas onto the Atlantians; the sea swallowed the
+    ships and island, sinking all to the bottom of the ocean, eradicating any Athena
+    worshipping Atlantian and sealing the trench through which Hades\u2019 kept attempting
+    to slither out of.\u201D"
 --- !u!222 &492377466
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25796,9 +26107,10 @@ GameObject:
   m_Component:
   - component: {fileID: 530691644}
   - component: {fileID: 530691645}
+  - component: {fileID: 530691646}
   m_Layer: 8
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Altar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25835,6 +26147,24 @@ CapsuleCollider:
   m_Height: 1.22
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &530691646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530691643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a09bc773467a624c894e28d605f6cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickedOnce_one: 0
+  clickedOnce_two: 0
+  textMeshProUGUI: {fileID: 570543227}
+  textStorage_prePuzzleOne: {fileID: 1045044816}
+  textStorage_postPuzzleOne: {fileID: 1236218790}
+  m_eventController: {fileID: 1424133667}
 --- !u!1 &536163245
 GameObject:
   m_ObjectHideFlags: 0
@@ -26204,6 +26534,7 @@ GameObject:
   - component: {fileID: 570543226}
   - component: {fileID: 570543228}
   - component: {fileID: 570543227}
+  - component: {fileID: 570543229}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -26218,17 +26549,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570543225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 935023530}
-  m_RootOrder: 1
+  m_Father: {fileID: 111951669}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 800, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570543227
 MonoBehaviour:
@@ -26250,18 +26581,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'You have arrived on the island.
-
-
-    You found a cave hidden behind a waterfall.
-
-
-    Upon entering the cave the entrance callapsed behind you, trapping you inside.
-
-
-    "Well, I guess the only way is forward..."
-
-    "I can''t see anything... where is that god damn lighter... Ah!"'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26305,13 +26625,13 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 4
+  m_overflowMode: 0
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
   m_enableKerning: 1
-  m_enableExtraPadding: 0
+  m_enableExtraPadding: 1
   checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
@@ -26327,16 +26647,16 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -298.85156, y: -226.40625, z: -298.88672, w: -224}
+  m_margin: {x: 12.338959, y: 5.7926636, z: 16.12976, w: 3.8240356}
   m_textInfo:
     textComponent: {fileID: 570543227}
-    characterCount: 264
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 47
-    wordCount: 45
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 8
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -26361,6 +26681,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570543225}
   m_CullTransparentMesh: 0
+--- !u!114 &570543229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570543225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &572877352
 GameObject:
   m_ObjectHideFlags: 0
@@ -27259,12 +27593,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586611837}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 390381066}
-  - {fileID: 832400789}
+  - {fileID: 96713290}
   m_Father: {fileID: 586244191}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27280,10 +27613,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 586244189}
+  - {fileID: 722444972}
   - {fileID: 285484380}
   - {fileID: 3855002}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586611837
 GameObject:
@@ -27297,6 +27631,9 @@ GameObject:
   - component: {fileID: 585760351}
   - component: {fileID: 579658367}
   - component: {fileID: 575220793}
+  - component: {fileID: 586611838}
+  - component: {fileID: 586611843}
+  - component: {fileID: 586611841}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -27304,6 +27641,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &586611838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586611837}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c11265b855408d42af33d62691f5194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: 1
+  m_Gain: 10
+  m_Use2DDistance: 0
 --- !u!1 &586611839
 GameObject:
   m_ObjectHideFlags: 0
@@ -27320,7 +27672,6 @@ GameObject:
   - component: {fileID: 579495327}
   - component: {fileID: 586611840}
   - component: {fileID: 586611842}
-  - component: {fileID: 586611841}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Player
@@ -27346,7 +27697,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586611839}
+  m_GameObject: {fileID: 586611837}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d078cfbcbe3ae1f409ac353efc4ac658, type: 3}
@@ -27354,6 +27705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 586611837}
   originalCamPos: {x: 0, y: 0, z: 0}
+  originOffset: {x: 0, y: 0.75, z: 0}
   shakeConstantly: 0
 --- !u!114 &586611842
 MonoBehaviour:
@@ -27371,6 +27723,19 @@ MonoBehaviour:
   isLeftHandOccupied: 0
   m_RightHand: {fileID: 390381065}
   m_LeftHand: {fileID: 832400788}
+--- !u!114 &586611843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586611837}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1697a0132719bae458729c9e99c0c716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addToGlobalShakers: 0
 --- !u!1001 &587233283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29206,7 +29571,7 @@ Transform:
   - {fileID: 2058222560}
   - {fileID: 1851006721}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &674005623 stripped
 Transform:
@@ -29214,6 +29579,93 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 750143611}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &675886293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 675886294}
+  - component: {fileID: 675886296}
+  - component: {fileID: 675886295}
+  m_Layer: 5
+  m_Name: PuzzleTwo_text_athena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &675886294
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675886293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &675886295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675886293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\nAthena was Poseidon\u2019s rival, and I believe, the second to be worshiped
+    by the Atlantians. She was symbolised by an owl. The owl was considered Athena\u2019s
+    sacred animal and the source of her wisdom, judgment and insight; the ability
+    to see what others cannot, like an owl during nighttime. \r\nAnother animal she
+    was symbolised by was the snake and snake skin. This was because she wore the
+    aegis, a scaly golden snake-like skin with a Gorgoneion medallion - providing
+    powerful magical protection from foes and evil. She was also associated with olives
+    as she is said to have created the first olive tree as a gift to win over the
+    people of Cecrops - later renamed to Athens.\r\n"
+--- !u!222 &675886296
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675886293}
+  m_CullTransparentMesh: 0
 --- !u!1 &676415008
 GameObject:
   m_ObjectHideFlags: 0
@@ -34648,6 +35100,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &722444971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722444972}
+  m_Layer: 0
+  m_Name: CameraOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &722444972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722444971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 586244191}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &727720146
 GameObject:
   m_ObjectHideFlags: 0
@@ -34771,7 +35253,7 @@ Transform:
   - {fileID: 2015681282}
   - {fileID: 472101580}
   m_Father: {fileID: 735304188}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &730271673 stripped
 Transform:
@@ -39704,15 +40186,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 735304188}
-  - component: {fileID: 735304189}
-  - component: {fileID: 735304194}
-  - component: {fileID: 735304193}
-  - component: {fileID: 735304190}
-  - component: {fileID: 735304192}
-  - component: {fileID: 735304191}
   m_Layer: 8
   m_Name: Altar_Hades
-  m_TagString: Bowl
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -39729,7 +40205,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 382074086}
-  - {fileID: 1064682807}
   - {fileID: 9094264264507360511}
   - {fileID: 1598625974}
   - {fileID: 109910698}
@@ -39739,88 +40214,6 @@ Transform:
   m_Father: {fileID: 421218283572520464}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 10.2890005, y: -90.00001, z: -90.00001}
---- !u!65 &735304189
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735304187}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7, y: 1.12, z: 1.3}
-  m_Center: {x: 0, y: 0.54, z: 0}
---- !u!114 &735304190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735304187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ad26792f9082747a7425fd0c0d0c5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &735304191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735304187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a42ee558ba26d384b87adeaeefc9c24e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <objectInSlot>k__BackingField: {fileID: 0}
-  bowlSlotTransform: {fileID: 1064682807}
---- !u!114 &735304192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735304187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a44dc74fdb9daea4685c58b5eeb3cc62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bowlHolderSlotTransform: {fileID: 1064682807}
-  <puzzlePieceComplete>k__BackingField: 0
-  puzzleElementScript: {fileID: 1168742374}
-  contentsTemplateScript: {fileID: 1406689425}
-  bowlParticles: {fileID: 109910697}
---- !u!65 &735304193
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735304187}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.05465573, y: 0.12262918, z: 1.185471}
-  m_Center: {x: -0.32, y: 1.0635805, z: 0}
---- !u!65 &735304194
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735304187}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.05465573, y: 0.12262918, z: 1.185471}
-  m_Center: {x: 0.32269454, y: 1.0635805, z: 0}
 --- !u!1001 &735364255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40025,6 +40418,106 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737356323}
   m_CullTransparentMesh: 0
+--- !u!1 &739439721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 739439722}
+  - component: {fileID: 739439724}
+  - component: {fileID: 739439723}
+  m_Layer: 5
+  m_Name: BeginningOfLevel_text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &739439722
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739439721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &739439723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739439721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "After decades of reading, studying, sailing, searching and exploring I
+    have finally found the location of an island rumoured to hold ruins from ancient
+    Greek times. These ruins are said to be the remains of Atlantis or at least remnants
+    of any surviving inhabitants. In some folklore it is even said to hold a doorway,
+    a passage, to the city, still alive and well - preserved thanks to its advanced
+    ancient technologies. Now that would be proof of the existence of the Greek gods,
+    wouldn\u2019t it\u2026\r\n\r\nI found it! The fables were real! This temple, these
+    ruins, they are of Greek architecture. Judging by the architecture and carvings
+    and paintings on the walls, it appears to be older, but the tools used, the architecture
+    itself seems more advanced than any other ever seen in ancient Greece. This is
+    very peculiar\u2026\r\n\r\nThis is definitely unusual - I stumbled upon a luscious
+    water hole with a waterfall deep within the temple, almost as if hidden, yet at
+    what seems to be the heart of the temple. I don\u2019t really know how I got here
+    nor which way is the way out. I think I see something behind the waterfall, I\u2019m
+    gonna go explore it.\r\n\r\n\"I can't see anything... where is that goddamn lighter...
+    Ah! There you are, my lucky charm.\"\r\n\r\n\u201COh look my knife, must have
+    fallen out while I was trying to make it out before the collapse.\u201D\r\n\r\nJust
+    to recap: I made my way to the waterfall and managed to get behind it, discovering
+    a doorway carved into the rock. Through it there was a cave which I entered and
+    started to explore, when the ground started shaking and I turned to run out but
+    before I knew it the entrance collapsed and I was trapped. Luckly, or oddly I
+    should say, the shaking stopped.\r\n\r\n\"Well, I guess the only way is forward...\"\r"
+--- !u!222 &739439724
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739439721}
+  m_CullTransparentMesh: 0
 --- !u!1 &742707861
 GameObject:
   m_ObjectHideFlags: 0
@@ -40183,7 +40676,7 @@ GameObject:
   - component: {fileID: 759006014}
   m_Layer: 8
   m_Name: PuzzleTwo_Clue_4
-  m_TagString: Info_puzzleTwo_Clue_p4
+  m_TagString: Info_puzzleClue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40245,7 +40738,7 @@ GameObject:
   - component: {fileID: 785869892}
   m_Layer: 8
   m_Name: PuzzleTwo_Clue_1
-  m_TagString: Info_puzzleTwo_Clue_p1
+  m_TagString: Info_puzzleClue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40293,7 +40786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenTranslated: 0
   textMeshProUGUI: {fileID: 570543227}
-  textStorage: {fileID: 2010855676}
+  textStorage: {fileID: 1581870999}
 --- !u!4 &788957939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4016584524428500776, guid: 40ae8ac37a91a2748a87a4037af236a7,
@@ -40563,6 +41056,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799812099}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &808370648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808370649}
+  - component: {fileID: 808370652}
+  - component: {fileID: 808370651}
+  - component: {fileID: 808370650}
+  m_Layer: 5
+  m_Name: Scrollbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &808370649
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808370648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1675240870}
+  m_Father: {fileID: 323836660}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &808370650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808370648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 1
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1087817898}
+  m_HandleRect: {fileID: 1087817897}
+  m_Direction: 2
+  m_Value: 0
+  m_Size: 1
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &808370651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808370648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &808370652
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808370648}
+  m_CullTransparentMesh: 1
 --- !u!1001 &813155883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40923,6 +41543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 832400789}
   - component: {fileID: 832400790}
+  - component: {fileID: 832400791}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Player
@@ -40943,7 +41564,7 @@ Transform:
   m_Children:
   - {fileID: 1813414597}
   - {fileID: 898145412}
-  m_Father: {fileID: 586244189}
+  m_Father: {fileID: 96713290}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &832400790
@@ -40965,6 +41586,21 @@ MonoBehaviour:
   <slotTransform>k__BackingField: {fileID: 0}
   handSlotTransform: {fileID: 898145412}
   handModel: {fileID: 1813414596}
+--- !u!114 &832400791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832400788}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c11265b855408d42af33d62691f5194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
 --- !u!1 &833079144
 GameObject:
   m_ObjectHideFlags: 0
@@ -40976,7 +41612,7 @@ GameObject:
   - component: {fileID: 833079145}
   m_Layer: 8
   m_Name: Altar_Poseidon
-  m_TagString: Bowl
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -41291,7 +41927,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 883737586}
-  - component: {fileID: 883737587}
   m_Layer: 8
   m_Name: Altar_Athena
   m_TagString: Bowl
@@ -41319,20 +41954,6 @@ Transform:
   m_Father: {fileID: 421218283572520464}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &883737587
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883737585}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.56
-  m_Height: 2.15
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1001 &886078842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41904,13 +42525,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935023530}
+  - component: {fileID: 935023531}
   m_Layer: 5
   m_Name: LogPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &935023530
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41922,8 +42544,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1283258834}
-  - {fileID: 570543226}
+  - {fileID: 323836660}
   - {fileID: 2092681288}
   m_Father: {fileID: 360084375}
   m_RootOrder: 3
@@ -41933,6 +42554,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &935023531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935023529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72cd59ede7e5f1c458a42150c9003067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshProUGUI: {fileID: 570543227}
+  textStorage_Beginning: {fileID: 739439723}
+  textStorage_PuzzleOneEnd: {fileID: 1286243301}
+  textStorage_PuzzleTwoEnd: {fileID: 1285947794}
+  textStorage_Ending: {fileID: 1941419402}
 --- !u!1001 &936721054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42396,7 +43034,7 @@ PrefabInstance:
     - target: {fileID: 4377330598061756480, guid: af8f5b932d5dbce4090f6f83ff422fae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4377330598061756480, guid: af8f5b932d5dbce4090f6f83ff422fae,
         type: 3}
@@ -43184,7 +43822,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2092681288}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -43222,12 +43860,14 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '
-
-
-    New Text'
+  m_Text: "\n\n\t\u201CHowever, the Atlantians grew too confident and arrogant and
+    turned to other gods to gain their blessings and powers too. Poseidon had two
+    main, godly, enemies; first is the goddess who beat him in the battle to become
+    the patron of the city later named after her, Athena; second is his brother and
+    eternal burden, Hades, a constant irritant, whom he was tasked to guard by Zuse
+    himself, who was imprisoned in the depths of the earth beneath his oceans.\u201D "
 --- !u!222 &1031393247
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48231,6 +48871,86 @@ Transform:
   m_Father: {fileID: 4123088638554327577}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1045044814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045044815}
+  - component: {fileID: 1045044817}
+  - component: {fileID: 1045044816}
+  m_Layer: 5
+  m_Name: PuzzleOne_text_altar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1045044815
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045044814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1045044816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045044814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\nHmmm\u2026 This looks like an altar or a shrine, but I\u2019m not sure
+    what I\u2019m supposed to do with it."
+--- !u!222 &1045044817
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045044814}
+  m_CullTransparentMesh: 0
 --- !u!4 &1046622879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3628268834084700596, guid: d1a2f2a92b5e0be4381591af94d046bd,
@@ -48435,11 +49155,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064682806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalPosition: {x: 0.000014742209, y: 1.2999992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 735304188}
-  m_RootOrder: 1
+  m_Father: {fileID: 2063803685}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1070589268
 PrefabInstance:
@@ -48776,6 +49496,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1087817896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087817897}
+  - component: {fileID: 1087817899}
+  - component: {fileID: 1087817898}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1087817897
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087817896}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1675240870}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1087817898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087817896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1087817899
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087817896}
+  m_CullTransparentMesh: 0
 --- !u!4 &1092191633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7219391577416344297, guid: 0e482c96b9ca0804587f19bfad622d64,
@@ -49090,12 +49885,12 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '
-
-
-    New Text'
+  m_Text: "\n\nIf I recall correctly, this symbol was used to represent the gods\u2019
+    \u201Cmagic\u201D, however, after the Titan Prometheus stole fire from Olympus
+    and gave it to humanity, it became synonymous with \u201Cfire\u201D, \u201Clighting
+    the way forward\u201D, \u201Cfinding your way\u201D and \u201Cdivine guidance\u201D."
 --- !u!222 &1126111308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49116,7 +49911,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2092681288}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -50739,6 +51534,90 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7c21f1b349d37a4f8f127300a8350d9, type: 3}
+--- !u!1 &1236218788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1236218789}
+  - component: {fileID: 1236218791}
+  - component: {fileID: 1236218790}
+  m_Layer: 5
+  m_Name: PuzzleTwo_text_poseidon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1236218789
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236218788}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1236218790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236218788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\nJudging by the water this is an altar dedicated to Poseidon. He was
+    the first to be worshiped by the Atlantians. He is usually symbolised by the element
+    of his domain, water; the creatures of his domain, fish; and his weapon, a trident.
+    \r\nHmmm\u2026 I don\u2019t have a trident on hand, however, I do remember that
+    sometimes when creating shrines and praying to him, people used to successfully
+    substitute it with a fishing knife.\r\n"
+--- !u!222 &1236218791
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236218788}
+  m_CullTransparentMesh: 0
 --- !u!1 &1249927395
 GameObject:
   m_ObjectHideFlags: 0
@@ -50869,7 +51748,7 @@ Transform:
   - {fileID: 114595446}
   - {fileID: 439709701}
   m_Father: {fileID: 735304188}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1264626902
 PrefabInstance:
@@ -51345,7 +52224,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282942234}
   m_CullTransparentMesh: 0
---- !u!1 &1283258833
+--- !u!1 &1285947792
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51353,72 +52232,157 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1283258834}
-  - component: {fileID: 1283258836}
-  - component: {fileID: 1283258835}
+  - component: {fileID: 1285947793}
+  - component: {fileID: 1285947795}
+  - component: {fileID: 1285947794}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PuzzleTwo_text_finish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1283258834
+--- !u!224 &1285947793
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283258833}
+  m_GameObject: {fileID: 1285947792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 935023530}
-  m_RootOrder: 0
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 820, y: 520}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1283258835
+--- !u!114 &1285947794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283258833}
+  m_GameObject: {fileID: 1285947792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6981132, g: 0.62368625, b: 0.44455323, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1283258836
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\nThat one felt different\u2026"
+--- !u!222 &1285947795
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283258833}
+  m_GameObject: {fileID: 1285947792}
+  m_CullTransparentMesh: 0
+--- !u!1 &1286243299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286243300}
+  - component: {fileID: 1286243302}
+  - component: {fileID: 1286243301}
+  m_Layer: 5
+  m_Name: PuzzleOne_text_finish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1286243300
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286243299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1286243301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286243299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\nOh no, not again! It\u2019s happening again. Maybe it\u2019ll loosen
+    the rubble blocking me in and I\u2019ll be able to get out! I better go back to
+    the entrance!"
+--- !u!222 &1286243302
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286243299}
   m_CullTransparentMesh: 0
 --- !u!1 &1292544933
 GameObject:
@@ -52970,6 +53934,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366682667}
   m_CullTransparentMesh: 0
+--- !u!1 &1375827558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1375827561}
+  - component: {fileID: 1375827560}
+  - component: {fileID: 1375827559}
+  m_Layer: 8
+  m_Name: DoorwayProximityDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1375827559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375827558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45886c6057810a344ac0db438a4463ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerByExit: 0
+--- !u!136 &1375827560
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375827558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 6
+  m_Height: 16
+  m_Direction: 0
+  m_Center: {x: -5.5, y: 0, z: 0}
+--- !u!4 &1375827561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375827558}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.54, y: -50.29, z: -23.06999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1384930813
 GameObject:
   m_ObjectHideFlags: 0
@@ -53188,7 +54211,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 735304188}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1406689421
 MonoBehaviour:
@@ -53433,7 +54456,7 @@ Transform:
   - {fileID: 1559568584}
   - {fileID: 562455036}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1424133666
 SphereCollider:
@@ -53465,6 +54488,7 @@ MonoBehaviour:
   playerHandLogicScript: {fileID: 586611842}
   m_puzzleManagerScript: {fileID: 562455037}
   m_doorwayLogicScript: {fileID: 2145776754}
+  doorwayProximityScript: {fileID: 1375827559}
   m_caveSystemPartTwo: {fileID: 4109125332551191766}
   m_caveSystemPartThree: {fileID: 898768482961391953}
   m_caveSystemPartTwoBlockade: {fileID: 2058222559}
@@ -53472,6 +54496,16 @@ MonoBehaviour:
   m_puzzleTwoComplete: 0
   m_gameStarted: 0
   m_playerIsByEntrance: 0
+  m_playerIsByExit: 0
+  playerCamera: {fileID: 586611837}
+  playerHands: {fileID: 96713288}
+  logEventsScript: {fileID: 935023531}
+  wallLoreOne: {fileID: 785869892}
+  wallLoreTwo: {fileID: 298248441}
+  wallLoreThree: {fileID: 250062300}
+  wallLoreFour: {fileID: 759006014}
+  allLoreExplored: 0
+  allInformationDiscovered: 0
 --- !u!114 &1424133668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58727,8 +59761,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   altarBlood: {fileID: 728484136}
-  altar: {fileID: 735304187}
+  altar: {fileID: 2063803678}
   daggerUsed: 0
+  m_eventController: {fileID: 1424133667}
 --- !u!1 &1482162255
 GameObject:
   m_ObjectHideFlags: 0
@@ -59699,7 +60734,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2092681288}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -59737,12 +60772,17 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '
-
-
-    New Text'
+  m_Text: "\n\n\t\u201CThey gained much favour with him, while people in other lands
+    turned from the god and abused his domain. Eventually, the people of Attica angered
+    the god so much, he gifted the Atlantians with some of his powers, and in return,
+    they were asked to spread his faith to the heathens of Attica and surrounding
+    lands. So the peaceful and joyous nation of Atlantis followed its patron\u2019s
+    will and took to the seas to spread his message. The Atlantians turned their advanced
+    but peaceful technology into weapons of war and dominated the oceans in the name
+    of their god, crushing the people of Attica and forcing them out of the oceans
+    and far from the shores.\u201C"
 --- !u!222 &1569129983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59905,6 +60945,89 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40ae8ac37a91a2748a87a4037af236a7, type: 3}
+--- !u!1 &1581870997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581870998}
+  - component: {fileID: 1581871000}
+  - component: {fileID: 1581870999}
+  m_Layer: 5
+  m_Name: PuzzleTwo_text_p1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1581870998
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581870997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1581870999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581870997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\n\t\u201CThe people of Atlantis were born in paradise, an island in
+    the Atlantic ocean, which Poseidon himself vowed to protect upon gazing its beauty,
+    in return, they stayed loyal and never turned from the god\u2019s faith. With
+    the god\u2019s favour and blessings, the people of Atlantis grew, prospered and
+    advanced years beyond other civilisations.\u201D"
+--- !u!222 &1581871000
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581870997}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1589843957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60018,7 +61141,7 @@ Transform:
   - {fileID: 591252292}
   - {fileID: 2026354045417434459}
   m_Father: {fileID: 735304188}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602396696
 GameObject:
@@ -60822,6 +61945,42 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 658721118}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1675240869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675240870}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1675240870
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675240869}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1087817897}
+  m_Father: {fileID: 808370649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1676655040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7789937665570738884, guid: ac2aed6457ff4934ba0db52afb218f5d,
@@ -67952,9 +69111,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1841275706}
+  - component: {fileID: 1841275708}
+  - component: {fileID: 1841275707}
   m_Layer: 8
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Altar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -67978,6 +69139,120 @@ Transform:
   m_Father: {fileID: 883737586}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1841275707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841275705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a09bc773467a624c894e28d605f6cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickedOnce_one: 0
+  clickedOnce_two: 0
+  textMeshProUGUI: {fileID: 570543227}
+  textStorage_prePuzzleOne: {fileID: 1045044816}
+  textStorage_postPuzzleOne: {fileID: 675886295}
+  m_eventController: {fileID: 1424133667}
+--- !u!136 &1841275708
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841275705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.56
+  m_Height: 2.15
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.05, z: 0}
+--- !u!1 &1844066509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844066510}
+  - component: {fileID: 1844066512}
+  - component: {fileID: 1844066511}
+  m_Layer: 5
+  m_Name: PuzzleOne_text_table
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1844066510
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844066509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1844066511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844066509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\nThis looks like a ritual or sacrificial table, the dagger would\u2019ve
+    been used to cut flesh and the offering would bleed onto the table to appease
+    a god. To my knowledge, there weren\u2019t many Greek gods who required blood
+    sacrifice, the primary one being Hades.\r"
+--- !u!222 &1844066512
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844066509}
+  m_CullTransparentMesh: 0
 --- !u!4 &1848285060 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6574967970360775651, guid: 26fc263834818e9429f6505897f4b976,
@@ -73118,6 +74393,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1867245273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867245274}
+  - component: {fileID: 1867245276}
+  - component: {fileID: 1867245275}
+  m_Layer: 5
+  m_Name: PuzzleTwo_text_hades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1867245274
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867245273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1867245275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867245273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\nHades was Poseidon\u2019s brother, cast down to the underworld below
+    Poseidon\u2019s oceans. He was symbolised by dogs - his three-headed hound. Mint,
+    after Minthe, a nymph whom he loved, with an unfortunate fate. And the narcissus
+    flower, which his yet-to-be wife was picking when he abducted her. \r\nOnly those
+    who have shed blood and have paid the ferryman can enter his realm - traditionally
+    this is represented by a gold coin, but I have read that some substitute it with
+    other objects of value.\r"
+--- !u!222 &1867245276
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867245273}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1867742547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79124,6 +80484,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26fc263834818e9429f6505897f4b976, type: 3}
+--- !u!1 &1941419400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941419401}
+  - component: {fileID: 1941419403}
+  - component: {fileID: 1941419402}
+  m_Layer: 5
+  m_Name: EndOfLevel_text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1941419401
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941419400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2092681288}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1941419402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941419400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "\n\nThis is it! I\u2019ve activated the doorway to Atlantis! This means
+    that there is truth to the greek myths and legends. How much truth I\u2019ll only
+    know once I cross through this doorway, so here goes nothing!"
+--- !u!222 &1941419403
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941419400}
+  m_CullTransparentMesh: 0
 --- !u!4 &1947188694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8833320592566283788, guid: b2f632b994873ff45b7558c7742575a1,
@@ -79466,6 +80907,181 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986046987}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2000693219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000693222}
+  - component: {fileID: 2000693221}
+  - component: {fileID: 2000693220}
+  m_Layer: 8
+  m_Name: Body
+  m_TagString: Altar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2000693220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000693219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a09bc773467a624c894e28d605f6cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickedOnce_one: 0
+  clickedOnce_two: 0
+  textMeshProUGUI: {fileID: 570543227}
+  textStorage_prePuzzleOne: {fileID: 1844066511}
+  textStorage_postPuzzleOne: {fileID: 1867245275}
+  m_eventController: {fileID: 1424133667}
+--- !u!65 &2000693221
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000693219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1, z: 1.2}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!4 &2000693222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000693219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3043143700691560951}
+  - {fileID: 8809210632665302443}
+  - {fileID: 5589040323059058837}
+  m_Father: {fileID: 382074086}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2001578512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001578514}
+  - component: {fileID: 2001578513}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2001578513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001578512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_RawSignal: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: -2.9102314
+          outSlope: -2.9102314
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.04221705
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -0.07932889
+          outSlope: -0.07932889
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.050517738
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0.5
+      m_SustainTime: 5
+      m_DecayTime: 1
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 1
+    m_DissipationMode: 1
+    m_DissipationDistance: 1000
+    m_PropagationSpeed: 250
+--- !u!4 &2001578514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001578512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2004229203
 GameObject:
   m_ObjectHideFlags: 0
@@ -79647,7 +81263,7 @@ GameObject:
   - component: {fileID: 2010855677}
   - component: {fileID: 2010855676}
   m_Layer: 5
-  m_Name: PuzzleTwo_text_p1
+  m_Name: PuzzleOne_text_vases
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79665,7 +81281,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2092681288}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -79703,12 +81319,12 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: '
 
 
-    New Text'
+    These vases seem to contain something, probably used in prayer rituals.'
 --- !u!222 &2010855677
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -80079,7 +81695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3ffffe27e6e634bbc0e8eef0a1c4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePiece: {fileID: 735304187}
+  puzzlePiece: {fileID: 2063803678}
 --- !u!1 &2045432069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2026354045694322519, guid: 44a9716ce0fe8534fadfd0fd691dbdc9,
@@ -84994,91 +86610,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &2057037122
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 100002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_Name
-      value: GridProjector
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.043
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.454
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11900000, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_Orthographic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11900000, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_FieldOfView
-      value: 33.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11900000, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_FarClipPlane
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11900000, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_AspectRatio
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11900000, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_OrthographicSize
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 11900000, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: e51532805da25d94cbd137ae98e1ffa8, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 46b12845355544642bf8f9d0cb373af7, type: 3}
 --- !u!1 &2058222559
 GameObject:
   m_ObjectHideFlags: 0
@@ -85125,6 +86656,129 @@ Transform:
   - {fileID: 1838334654}
   m_Father: {fileID: 666240764}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2063803678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063803685}
+  - component: {fileID: 2063803684}
+  - component: {fileID: 2063803683}
+  - component: {fileID: 2063803682}
+  - component: {fileID: 2063803681}
+  - component: {fileID: 2063803680}
+  - component: {fileID: 2063803679}
+  m_Layer: 8
+  m_Name: Top
+  m_TagString: Bowl
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2063803679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063803678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42ee558ba26d384b87adeaeefc9c24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <objectInSlot>k__BackingField: {fileID: 0}
+  bowlSlotTransform: {fileID: 1064682807}
+--- !u!114 &2063803680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063803678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a44dc74fdb9daea4685c58b5eeb3cc62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bowlHolderSlotTransform: {fileID: 1064682807}
+  <puzzlePieceComplete>k__BackingField: 0
+  puzzleElementScript: {fileID: 1168742374}
+  contentsTemplateScript: {fileID: 1406689425}
+  bowlParticles: {fileID: 109910697}
+  m_eventController: {fileID: 1424133667}
+--- !u!114 &2063803681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063803678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ad26792f9082747a7425fd0c0d0c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2063803682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063803678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.09999998, z: 1.185471}
+  m_Center: {x: -0.00038664864, y: 1.0450077, z: 0.000000025535238}
+--- !u!65 &2063803683
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063803678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05465573, y: 0.12262918, z: 1.185471}
+  m_Center: {x: -0.32, y: 1.0635805, z: 0}
+--- !u!65 &2063803684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063803678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05465573, y: 0.12262918, z: 1.185471}
+  m_Center: {x: 0.32269454, y: 1.0635805, z: 0}
+--- !u!4 &2063803685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063803678}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8608878802555593926}
+  - {fileID: 7971465190098858302}
+  - {fileID: 4381547544160233861}
+  - {fileID: 1064682807}
+  m_Father: {fileID: 382074086}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2065606222
 GameObject:
@@ -85367,13 +87021,24 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 739439722}
   - {fileID: 1126111309}
+  - {fileID: 1045044815}
+  - {fileID: 1844066510}
   - {fileID: 2010855675}
+  - {fileID: 1286243300}
+  - {fileID: 1581870998}
   - {fileID: 1569129981}
   - {fileID: 1031393245}
   - {fileID: 492377464}
+  - {fileID: 79219973}
+  - {fileID: 1236218789}
+  - {fileID: 675886294}
+  - {fileID: 1867245274}
+  - {fileID: 1285947793}
+  - {fileID: 1941419401}
   m_Father: {fileID: 935023530}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -95706,7 +97371,7 @@ GameObject:
   - component: {fileID: 2145776754}
   m_Layer: 8
   m_Name: Doorway
-  m_TagString: Untagged
+  m_TagString: Info_puzzleClue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -95765,6 +97430,9 @@ MonoBehaviour:
   m_doorSlab: {fileID: 6371922215163654460}
   m_doorPortalParticles: {fileID: 324407144}
   m_eventController: {fileID: 1424133667}
+  hasBeenClicked: 0
+  textMeshProUGUI: {fileID: 570543227}
+  textStorage: {fileID: 79219974}
 --- !u!4 &38335337105214056
 Transform:
   m_ObjectHideFlags: 0
@@ -101295,6 +102963,7 @@ MonoBehaviour:
   puzzleElementScript: {fileID: 1168742374}
   contentsTemplateScript: {fileID: 1361588642}
   bowlParticles: {fileID: 2048188248}
+  m_eventController: {fileID: 1424133667}
 --- !u!114 &1321865135413417264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102733,11 +104402,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3852081151918711345}
-  m_LocalRotation: {x: -0.70710695, y: -0, z: 0.00000002469772, w: 0.70710665}
-  m_LocalPosition: {x: 0.000015002979, y: 0.049999237, z: 0}
-  m_LocalScale: {x: 0.45000002, y: 0.6999998, z: 0.049999975}
+  m_LocalRotation: {x: -0.70710695, y: -0.000000029802322, z: 0.000000008520409, w: 0.70710665}
+  m_LocalPosition: {x: 0.000030357074, y: 0.049999237, z: 0}
+  m_LocalScale: {x: 0.45, y: 0.6999999, z: 0.049999967}
   m_Children: []
-  m_Father: {fileID: 382074086}
+  m_Father: {fileID: 2000693222}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3091111431260551197
@@ -103074,6 +104743,7 @@ MonoBehaviour:
   puzzleElementScript: {fileID: 1168742374}
   contentsTemplateScript: {fileID: 1365926951}
   bowlParticles: {fileID: 1853080723}
+  m_eventController: {fileID: 1424133667}
 --- !u!114 &3967209246825522449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103618,12 +105288,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4241487802235428934}
-  m_LocalRotation: {x: 0.49999994, y: 0.50000024, z: -0.49999997, w: -0.4999999}
-  m_LocalPosition: {x: 0.000014342368, y: 1.1000023, z: -0.59999716}
-  m_LocalScale: {x: 0.099999934, y: 0.1, z: 0.6999998}
+  m_LocalRotation: {x: 0.5, y: 0.50000024, z: -0.49999997, w: -0.49999988}
+  m_LocalPosition: {x: 0.000029362738, y: 1.1000023, z: -0.59999454}
+  m_LocalScale: {x: 0.09999992, y: 0.1, z: 0.69999963}
   m_Children: []
-  m_Father: {fileID: 382074086}
-  m_RootOrder: 5
+  m_Father: {fileID: 2063803685}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &4387934712867166666
 MeshRenderer:
@@ -104063,11 +105733,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6476222616452666834}
-  m_LocalRotation: {x: -0.70710695, y: -0, z: 0.00000002469772, w: 0.70710665}
-  m_LocalPosition: {x: 0.00001488824, y: 0.6000023, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.4999999, z: 0.3999998}
+  m_LocalRotation: {x: -0.70710695, y: -0.000000029802322, z: 0.000000008520409, w: 0.70710665}
+  m_LocalPosition: {x: 0.000030242334, y: 0.6000023, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.5, z: 0.39999974}
   m_Children: []
-  m_Father: {fileID: 382074086}
+  m_Father: {fileID: 2000693222}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5622188503608217298
@@ -110503,7 +112173,7 @@ PrefabInstance:
     - target: {fileID: 1378781196320565768, guid: 14c1ae463296edd4da5dd6e705701385,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1378781196320565768, guid: 14c1ae463296edd4da5dd6e705701385,
         type: 3}
@@ -110696,12 +112366,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782786306582877362}
-  m_LocalRotation: {x: 0.49999994, y: 0.50000024, z: -0.49999997, w: -0.4999999}
-  m_LocalPosition: {x: 0.000015221536, y: 1.1000023, z: 0.60000265}
-  m_LocalScale: {x: 0.099999934, y: 0.1, z: 0.6999998}
+  m_LocalRotation: {x: 0.5, y: 0.50000024, z: -0.49999997, w: -0.49999988}
+  m_LocalPosition: {x: 0.000030234456, y: 1.1000023, z: 0.6000054}
+  m_LocalScale: {x: 0.09999992, y: 0.1, z: 0.69999963}
   m_Children: []
-  m_Father: {fileID: 382074086}
-  m_RootOrder: 4
+  m_Father: {fileID: 2063803685}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8024218715869985594
 MeshRenderer:
@@ -111011,12 +112681,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4320106100856968920}
-  m_LocalRotation: {x: -0.70710695, y: -0, z: 0.00000002469772, w: 0.70710665}
-  m_LocalPosition: {x: 0.000014794363, y: 1.0499992, z: 0}
-  m_LocalScale: {x: 0.7, y: 1.1999996, z: 0.09999995}
+  m_LocalRotation: {x: -0.70710695, y: -0.000000029802322, z: 0.000000008520409, w: 0.70710665}
+  m_LocalPosition: {x: 0.000030148458, y: 1.0499992, z: 0}
+  m_LocalScale: {x: 0.69999987, y: 1.1999997, z: 0.099999934}
   m_Children: []
-  m_Father: {fileID: 382074086}
-  m_RootOrder: 3
+  m_Father: {fileID: 2063803685}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &8611366762132152463
 Transform:
@@ -111053,11 +112723,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9209945372929032337}
-  m_LocalRotation: {x: -0.70710695, y: -0, z: 0.00000002469772, w: 0.70710665}
-  m_LocalPosition: {x: 0.000014982116, y: 0.15000534, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.5999998, z: 0.049999975}
+  m_LocalRotation: {x: -0.70710695, y: -0.000000029802322, z: 0.000000008520409, w: 0.70710665}
+  m_LocalPosition: {x: 0.00003033621, y: 0.15000534, z: 0}
+  m_LocalScale: {x: 0.34999993, y: 0.59999985, z: 0.049999967}
   m_Children: []
-  m_Father: {fileID: 382074086}
+  m_Father: {fileID: 2000693222}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8830889801496580563
