@@ -31,15 +31,24 @@ public class InteractableCanvasScript : MonoBehaviour
     [SerializeField]
     private GameObject interactablePanel;
 
+    [SerializeField]
+    private bool isControlsPanelUp;
+    [SerializeField]
+    private GameObject controlsPanel;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         isCursorFree = false;
         isMapOpen = false;
         isPauseMenuOpen = false;
         isLogOpen = false;
         isInteractiblePanelUp = true;
+        isControlsPanelUp = false;
 
         //Cursor.lockState = CursorLockMode.Locked;
         interactablePanel.SetActive(true);
@@ -47,6 +56,7 @@ public class InteractableCanvasScript : MonoBehaviour
         mapCamera.SetActive(false);
         pausePanel.SetActive(false);
         logPanel.SetActive(false);
+        controlsPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -54,34 +64,38 @@ public class InteractableCanvasScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab) && !isLogOpen && !isPauseMenuOpen)
         {
-            ToggleInteractablePanel();
+            //ToggleInteractablePanel();
             ToggleLevelMap();
         }
 
         if (Input.GetKeyDown(KeyCode.R) && !isMapOpen && !isPauseMenuOpen)
         {
-            ToggleInteractablePanel();
+            //ToggleInteractablePanel();
             ToggleLog();
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isMapOpen)
             {
                 //Cursor.lockState = CursorLockMode.Locked;
                 ToggleLevelMap();
-                ToggleInteractablePanel();
+                //ToggleInteractablePanel();
             }
             else if (isLogOpen)
             {
  
                 ToggleLog();
-                ToggleInteractablePanel();
+                //ToggleInteractablePanel();
+            }
+            else if(isControlsPanelUp)
+            {
+                ToggleControlsPanel();
             }
             else
             {
                 TogglePauseMenu();
-                ToggleInteractablePanel();
+                //ToggleInteractablePanel();
             }
         }
     }
@@ -100,7 +114,7 @@ public class InteractableCanvasScript : MonoBehaviour
         //{
         //    Debug.Log("Opening pause Menu");
         //    ToggleInteractablePanel();
-            
+
         //}
         //else if(!isPauseMenuOpen)
         //{
@@ -108,7 +122,10 @@ public class InteractableCanvasScript : MonoBehaviour
         //    ToggleInteractablePanel();
         //    //Cursor.lockState = CursorLockMode.None;
         //}
-        if(isPauseMenuOpen)
+
+        pausePanel.SetActive(isPauseMenuOpen);
+
+        if (isPauseMenuOpen)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -120,14 +137,24 @@ public class InteractableCanvasScript : MonoBehaviour
             Cursor.visible = false;
             Time.timeScale = 1;
         }
-
-        pausePanel.SetActive(isPauseMenuOpen);
     }
 
     private void ToggleLog()
     {
         isLogOpen = !isLogOpen;
         logPanel.SetActive(isLogOpen);
+        if (isLogOpen)
+        {
+            //Debug.Log("Locking cursor");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else //if (!isInteractiblePanelUp)
+        {
+            //Debug.Log("Unlocking Cursor");
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 
     private void ToggleInteractablePanel()
@@ -137,14 +164,23 @@ public class InteractableCanvasScript : MonoBehaviour
         //if (isInteractiblePanelUp)
         //{
         //    //Debug.Log("Locking cursor");
-        //    Cursor.lockState = CursorLockMode.None;
-        //    Cursor.visible = true;
+        //    //Cursor.lockState = CursorLockMode.None;
+        //    //Cursor.visible = true;
         //}
         //else //if (!isInteractiblePanelUp)
         //{
         //    //Debug.Log("Unlocking Cursor");
-        //    Cursor.lockState = CursorLockMode.Locked;
-        //    Cursor.visible = false;
+        //    //Cursor.lockState = CursorLockMode.Locked;
+        //    //Cursor.visible = false;
         //}
+    }
+
+    public void ToggleControlsPanel()
+    {
+        isControlsPanelUp = !isControlsPanelUp;
+        controlsPanel.SetActive(isControlsPanelUp);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

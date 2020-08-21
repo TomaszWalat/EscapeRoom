@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Cinemachine;
-using MilkShake;
 
 public class InGameEventControllerScript : MonoBehaviour
 {
@@ -64,6 +62,27 @@ public class InGameEventControllerScript : MonoBehaviour
     [SerializeField]
     private bool allInformationDiscovered;
 
+    [SerializeField]
+    private FogOfWarLogicScript mapFOW_p1;
+    [SerializeField]
+    private FogOfWarLogicScript mapFOW_p2;
+    [SerializeField]
+    private FogOfWarLogicScript mapFOW_p3;
+
+    [SerializeField]
+    private GameObject mapMask_1;
+    [SerializeField]
+    private GameObject mapMask_2;
+
+    private bool caveChanged;
+
+    [SerializeField]
+    private AudioSource earthQuake_1;
+    [SerializeField]
+    private AudioSource earthQuake_2;
+    [SerializeField]
+    private AudioSource earthQuake_3;
+
     //[SerializeField]
     //private GameObject shakeSource;
 
@@ -79,6 +98,7 @@ public class InGameEventControllerScript : MonoBehaviour
         m_puzzleOneComplete = false;
         m_puzzleTwoComplete = false;
         m_playerIsByExit = false;
+        caveChanged = false;
     }
 
     // Update is called once per frame
@@ -87,6 +107,12 @@ public class InGameEventControllerScript : MonoBehaviour
 
         if (!m_gameStarted)
         {
+            mapMask_1.SetActive(true);
+            mapMask_2.SetActive(false);
+            mapFOW_p1.TurnOnPieces();
+            mapFOW_p2.TurnOnPieces();
+            mapFOW_p3.TurnOffPieces();
+            earthQuake_1.Play();
             StartCoroutine(playerCamera.GetComponent<CameraShakeScript>().Shake(2.5f, 0.5f));
             StartCoroutine(playerHands.GetComponent<CameraShakeScript>().Shake(2.5f, 0.01f));
             logEventsScript.TriggerEvent_Beginning();
@@ -131,6 +157,7 @@ public class InGameEventControllerScript : MonoBehaviour
         playerHands.GetComponent<CameraShakeScript>().SetShakeConstantly(true);
         StartCoroutine(playerCamera.GetComponent<CameraShakeScript>().ShakeConstant(1.5f, 0.25f));
         StartCoroutine(playerHands.GetComponent<CameraShakeScript>().ShakeConstant(1.5f, 0.01f));
+        earthQuake_2.Play();
         logEventsScript.TriggerEvent_PuzzleOneFinished();
         //StartCoroutine(player.GetComponent<CameraShakeScript>().ShakeConstant(1.5f, 0.25f));
         //changeCaveSystem();
@@ -139,7 +166,7 @@ public class InGameEventControllerScript : MonoBehaviour
     public void puzzleTwoCompleted()
     {
         m_puzzleTwoComplete = true;
-
+        earthQuake_3.Play();
         //StartCoroutine(player.GetComponent<CameraShakeScript>().Shake(1.5f, 0.5f));
         StartCoroutine(playerCamera.GetComponent<CameraShakeScript>().Shake(1.5f, 0.5f));
         StartCoroutine(playerHands.GetComponent<CameraShakeScript>().Shake(1.5f, 0.01f));
@@ -150,6 +177,13 @@ public class InGameEventControllerScript : MonoBehaviour
 
     private void changeCaveSystem()
     {
+        earthQuake_2.Stop();
+        caveChanged = true;
+        mapMask_1.SetActive(false);
+        mapMask_2.SetActive(true);
+        mapFOW_p1.TurnOnPieces();
+        mapFOW_p2.TurnOffPieces();
+        mapFOW_p3.TurnOnPieces();
         m_caveSystemPartTwo.SetActive(false);
         m_caveSystemPartThree.SetActive(true);
         m_caveSystemPartTwoBlockade.SetActive(true);
@@ -160,7 +194,7 @@ public class InGameEventControllerScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             m_playerIsByEntrance = true;
-            if(m_puzzleOneComplete)
+            if(m_puzzleOneComplete && !caveChanged)
             {
                 playerCamera.GetComponent<CameraShakeScript>().SetShakeConstantly(false);
                 playerHands.GetComponent<CameraShakeScript>().SetShakeConstantly(false);

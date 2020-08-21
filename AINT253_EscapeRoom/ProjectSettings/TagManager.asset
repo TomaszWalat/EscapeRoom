@@ -22,6 +22,8 @@ TagManager:
   - Blood
   - Info_puzzleClue
   - Altar
+  - FOW_piece
+  - Player_marker
   layers:
   - Default
   - TransparentFX
@@ -34,7 +36,7 @@ TagManager:
   - Interactable
   - TorchHead
   - PlayerModel
-  - 
+  - FogOfWar
   - 
   - 
   - 
@@ -61,4 +63,7 @@ TagManager:
     locked: 0
   - name: Torch_FLame_Particles
     uniqueID: 743983467
+    locked: 0
+  - name: Map
+    uniqueID: 398920831
     locked: 0
