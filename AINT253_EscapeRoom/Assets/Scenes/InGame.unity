@@ -51975,7 +51975,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 5}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1176667039
 MonoBehaviour:
@@ -51997,7 +51997,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: c6270a9190c87f244acc5fd815888462, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -107372,8 +107372,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactablePointerImageObject: {fileID: 1176667037}
   interactableLayer: 8
-  defaultPointerImage: {fileID: 21300000, guid: 394e93ce356b57344903a08ff72fcab2,
+  defaultPointerImage: {fileID: 21300000, guid: c6270a9190c87f244acc5fd815888462,
     type: 3}
+  inspectIcon: {fileID: 21300000, guid: 2f4c3547702506f4b86ff84c85cc8853, type: 3}
+  interactIcon: {fileID: 21300000, guid: 6e25a0535470e7a449c226fb4127e72d, type: 3}
   interactionDistance: 5
 --- !u!1 &5145290699359550461
 GameObject:

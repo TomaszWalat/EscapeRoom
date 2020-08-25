@@ -15,8 +15,11 @@ public class LookingAtScript : MonoBehaviour
 
     public Sprite defaultPointerImage;
 
+    public Sprite inspectIcon;
+    public Sprite interactIcon;
+
     public float interactionDistance;
-    
+
     private IInteractionLogicScript m_InteractionLogicScript;
 
 
@@ -43,21 +46,41 @@ public class LookingAtScript : MonoBehaviour
             objectObserved = null;
         }
 
-        if (objectObserved != null && objectObserved.layer == interactableLayer)
+        if (objectObserved != null)
         {
-            //interactablePointerImageObject.GetComponent<Image>().sprite = objectObserved.GetComponent<InteractableObjectScript>().GetInteractableImage();
-            interactablePointerImageObject.GetComponent<Image>().color = Color.red;
-
-            if (Input.GetKeyDown(KeyCode.E))
+            if (objectObserved.layer == interactableLayer)
             {
-                //Debug.Log(objectObserved.ToString());
-                m_InteractionLogicScript.InteractionRequest(objectObserved);
+                //interactablePointerImageObject.GetComponent<Image>().sprite = objectObserved.GetComponent<InteractableObjectScript>().GetInteractableImage();
+                //interactablePointerImageObject.GetComponent<Image>().color = Color.red;
+
+                if (objectObserved.tag == "Ingredient" || objectObserved.tag == "Bowl" || objectObserved.tag == "ClayPot" || objectObserved.tag == "Torch" || objectObserved.tag == "TorchHolder" || objectObserved.tag == "Lighter")
+                {
+                    interactablePointerImageObject.GetComponent<Image>().sprite = interactIcon;
+                    //interactablePointerImageObject.GetComponent<RectTransform>().
+
+                }
+                else if (objectObserved.tag == "Altar" || objectObserved.tag == "Info_puzzleClue" || objectObserved.tag == "Info_doorway_gorg")
+                {
+                    interactablePointerImageObject.GetComponent<Image>().sprite = inspectIcon;
+
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    //Debug.Log(objectObserved.ToString());
+                    m_InteractionLogicScript.InteractionRequest(objectObserved);
+                }
+            }
+            else
+            {
+                interactablePointerImageObject.GetComponent<Image>().sprite = defaultPointerImage;
+                //interactablePointerImageObject.GetComponent<Image>().color = Color.white;
             }
         }
         else
         {
             interactablePointerImageObject.GetComponent<Image>().sprite = defaultPointerImage;
-            interactablePointerImageObject.GetComponent<Image>().color = Color.white;
+            //interactablePointerImageObject.GetComponent<Image>().color = Color.white;
         }
 
         //Debug.DrawRay(transform.po)
