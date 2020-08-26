@@ -185,8 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723274b822865ed4d9ed2a504c0ca79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Burning: 1
-  maxIntensity: 0.25
 --- !u!108 &6265025261428891490
 Light:
   m_ObjectHideFlags: 0
@@ -197,7 +195,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 1, g: 0.8143723, b: 0.16862744, a: 1}
+  m_Color: {r: 1, g: 0.78039217, b: 0.22352941, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
