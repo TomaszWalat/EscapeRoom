@@ -46,10 +46,10 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
 
         if (Input.GetKey(KeyCode.Q))
         {
-            //UnityEngine.Debug.Log("Q is pressed");
+            UnityEngine.Debug.Log("Q is pressed");
             if (Input.GetKey(KeyCode.Mouse1))
             {
-                //UnityEngine.Debug.Log("M1 is pressed");
+                UnityEngine.Debug.Log("M1 is pressed");
                 if (m_RightHandSlot.isSlotFull)
                 {
                     m_RightHandSlot.objectInSlot.GetComponent<PickableObjectScript>().GetDropped();
@@ -58,11 +58,11 @@ public class HandLogicScript : AbstractSlotHolderScript, IInteractionLogicScript
                     //isRightHandOccupied = false;
                 }
             }
-            else if (Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse0))
             {
+                UnityEngine.Debug.Log("M0 is pressed");
                 if (m_LeftHandSlot.isSlotFull)
                 {
-                    //UnityEngine.Debug.Log("M0 is pressed");
                     m_LeftHandSlot.objectInSlot.GetComponent<PickableObjectScript>().GetDropped();
                     //m_LeftHandSlot.DropHeldItem();
                     DropItem(m_LeftHandSlot.objectInSlot);

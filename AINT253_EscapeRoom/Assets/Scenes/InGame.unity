@@ -33,7 +33,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 64
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
@@ -58,7 +58,7 @@ LightmapSettings:
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
-    m_AO: 1
+    m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
@@ -70,14 +70,14 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
-    m_ReflectionCompression: 2
+    m_ReflectionCompression: 1
     m_MixedBakeMode: 2
     m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
-    m_PVRSampleCount: 500
+    m_PVRSampleCount: 200
     m_PVRBounces: 2
-    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentSampleCount: 200
     m_PVREnvironmentReferencePointCount: 2048
     m_PVRFilteringMode: 2
     m_PVRDenoiserTypeDirect: 0
@@ -23827,7 +23827,6 @@ GameObject:
   m_Component:
   - component: {fileID: 390381066}
   - component: {fileID: 390381067}
-  - component: {fileID: 390381068}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Player
@@ -23870,18 +23869,6 @@ MonoBehaviour:
   <slotTransform>k__BackingField: {fileID: 0}
   handSlotTransform: {fileID: 341443868}
   handModel: {fileID: 1805346276}
---- !u!114 &390381068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390381065}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c11265b855408d42af33d62691f5194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &399852804
 GameObject:
   m_ObjectHideFlags: 0
@@ -24439,6 +24426,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1598625974}
     m_Modifications:
+    - target: {fileID: 1049736525842517840, guid: 7560f69500d4890449e69f9acd68fde7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049736524862947792, guid: 7560f69500d4890449e69f9acd68fde7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049736525202783490, guid: 7560f69500d4890449e69f9acd68fde7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1049736525207634693, guid: 7560f69500d4890449e69f9acd68fde7,
         type: 3}
       propertyPath: m_Name
@@ -24505,21 +24507,6 @@ PrefabInstance:
       value: -4.53
       objectReference: {fileID: 0}
     - target: {fileID: 1049736524247153285, guid: 7560f69500d4890449e69f9acd68fde7,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1049736524862947792, guid: 7560f69500d4890449e69f9acd68fde7,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1049736525202783490, guid: 7560f69500d4890449e69f9acd68fde7,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1049736525842517840, guid: 7560f69500d4890449e69f9acd68fde7,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -27358,6 +27345,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2111729985}
     m_Modifications:
+    - target: {fileID: 4010686172724217797, guid: 50d9a38b0a3393241b3b41a7e6d053e4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4010686173800434567, guid: 50d9a38b0a3393241b3b41a7e6d053e4,
         type: 3}
       propertyPath: m_Name
@@ -27422,11 +27414,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4010686172724217797, guid: 50d9a38b0a3393241b3b41a7e6d053e4,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4010686172738082290, guid: 50d9a38b0a3393241b3b41a7e6d053e4,
         type: 3}
@@ -40935,7 +40922,6 @@ GameObject:
   m_Component:
   - component: {fileID: 832400789}
   - component: {fileID: 832400790}
-  - component: {fileID: 832400791}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Player
@@ -40978,18 +40964,6 @@ MonoBehaviour:
   <slotTransform>k__BackingField: {fileID: 0}
   handSlotTransform: {fileID: 898145412}
   handModel: {fileID: 1813414596}
---- !u!114 &832400791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 832400788}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c11265b855408d42af33d62691f5194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &833079144
 GameObject:
   m_ObjectHideFlags: 0
@@ -42595,6 +42569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 22.631989
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307043216436698492, guid: af8f5b932d5dbce4090f6f83ff422fae,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af8f5b932d5dbce4090f6f83ff422fae, type: 3}
@@ -52543,22 +52522,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6070657896310652762, guid: 7501bacdda9babd40a60e1e67f3e4077,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 4570476350871365355, guid: 7501bacdda9babd40a60e1e67f3e4077,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 4570476350992283125, guid: 7501bacdda9babd40a60e1e67f3e4077,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 6070657896310652762, guid: 7501bacdda9babd40a60e1e67f3e4077,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4570476352326851855, guid: 7501bacdda9babd40a60e1e67f3e4077,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570476350871365355, guid: 7501bacdda9babd40a60e1e67f3e4077,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -53571,16 +53550,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1598625974}
     m_Modifications:
-    - target: {fileID: 2639779028050563753, guid: 2aae82d1bee979c44b6530af0611dd1e,
-        type: 3}
-      propertyPath: m_Name
-      value: NarcissusFlowers
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639779028050563753, guid: 2aae82d1bee979c44b6530af0611dd1e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 2639779028050563754, guid: 2aae82d1bee979c44b6530af0611dd1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53642,6 +53611,16 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7870979227493717658, guid: 2aae82d1bee979c44b6530af0611dd1e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639779028050563753, guid: 2aae82d1bee979c44b6530af0611dd1e,
+        type: 3}
+      propertyPath: m_Name
+      value: NarcissusFlowers
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639779028050563753, guid: 2aae82d1bee979c44b6530af0611dd1e,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -102801,6 +102780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsKinematic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010095496866301215, guid: 44a9716ce0fe8534fadfd0fd691dbdc9,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44a9716ce0fe8534fadfd0fd691dbdc9, type: 3}

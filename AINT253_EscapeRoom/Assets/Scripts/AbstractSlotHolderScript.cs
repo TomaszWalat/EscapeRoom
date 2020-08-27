@@ -48,7 +48,7 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         //Debug.Log("I am method: CheckIfSlotAreFull()");
         ////PrintSlotList();
 
-        return (numberOfSlots > numberOfFreeSlots);
+        return true;// (numberOfSlots > numberOfFreeSlots);
     }
 
     protected IItemSlotScript FindFreeSlot(GameObject requester)
@@ -169,7 +169,7 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
 
             freeSlot.HoldItem(item);
 
-            numberOfFreeSlots--;
+            //numberOfFreeSlots--;
 
             CheckIfSlotAreFull();
             //Debug.Log("I am method: HoldItem()");
@@ -184,7 +184,7 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         {
             temp = slotList[slotIndex].GiveHeldItem();
 
-            numberOfFreeSlots++;
+            //numberOfFreeSlots++;
 
             CheckIfSlotAreFull();
         }
@@ -195,6 +195,8 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
 
     protected void DropItem(GameObject itemToDrop)
     {
+
+        Debug.Log("I am method: DropItem()");
         //int objectIndex = -1;
 
         for (int i = 0; i < slotList.Count; i++)
@@ -203,7 +205,7 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
             {
                 //objectIndex = i;
                 slotList[i].DropHeldItem();
-                numberOfFreeSlots++;
+                //numberOfFreeSlots++;
             }
         }
 
@@ -212,7 +214,8 @@ public abstract class AbstractSlotHolderScript : MonoBehaviour
         //    slotList[objectIndex].DropHeldItem();
         //}
 
-        
+
+        Debug.Log("I am method: DropItem() 2");
 
         CheckIfSlotAreFull();
         //Debug.Log("I am method: DropItem()");

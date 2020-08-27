@@ -41,15 +41,19 @@ public class PickableObjectScript : MonoBehaviour
     public void GetDropped()
     {
         UnityEngine.Debug.Log(counterP + " P >>> I am " + this.ToString());
-        UnityEngine.Debug.Log(counterP + " P >>> My parent is " + parentTransform);
+        UnityEngine.Debug.Log(counterP + " P >>> My parent was " + parentTransform);
         counterP++;
-        //if(parentTransform)
-        parentTransform.gameObject.GetComponentInParent<IInteractionLogicScript>().InteractionRequest(gameObject);
+        if (parentTransform != null && parentTransform != gameObject.transform)
+        {
+            parentTransform.gameObject.GetComponentInParent<IInteractionLogicScript>().InteractionRequest(gameObject);
+        }
         parentTransform = null;
         transform.SetParent(null);
         SetKinematic(false);
 
         isDetached = true;
+
+        UnityEngine.Debug.Log(counterP + " P >>> My parent is now " + parentTransform);
     }
 
     protected void SetKinematic(bool isKinematic)
